@@ -1,19 +1,13 @@
 import React from 'react';
 
-import { Header } from './Header';
-import './page.css';
+import { Header } from '../globals/header/global-header';
+import { Footer } from '../globals/footer/global-footer';
+import './example.css';
 
-export const Page = () => {
-  const [user, setUser] = React.useState();
-
+export const example = () => {
   return (
     <article>
-      <Header
-        user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-      />
+      <Header />
 
       <section>
         <h2>Pages in Storybook</h2>
@@ -64,6 +58,7 @@ export const Page = () => {
           Viewports addon in the toolbar
         </div>
       </section>
+      <Footer />
     </article>
   );
 };

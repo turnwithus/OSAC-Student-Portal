@@ -1,1 +1,15 @@
-@import './stories/button.scss';
+/* Vars */
+@import './lib/scss/vars/colors';
+@import './lib/scss/vars/measurements';
+
+/* Lib */
+@import './lib/scss/lib/a11y';
+@import './lib/scss/lib/layout';
+@import './lib/scss/lib/media-queries';
+@import './lib/scss/lib/root';
+@import './lib/scss/lib/wrapper';
+
+/* Elements */
+@import './stories/blocks/button/button';
+@import './stories/globals/footer/global-footer';
+@import './stories/globals/header/global-header';
