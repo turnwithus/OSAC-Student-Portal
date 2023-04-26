@@ -52,6 +52,7 @@
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
+    "@storybook/addon-styling": "^1.0.3",
     "@storybook/blocks": "^7.0.7",
     "@storybook/preset-create-react-app": "^7.0.7",
     "@storybook/react": "^7.0.7",
@@ -59,6 +60,7 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
+    "sass": "^1.62.1",
     "storybook": "^7.0.7",
     "webpack": "^5.80.0"
   }
