@@ -1,49 +1,43 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = (props) => {
+  const {
+    variant,
+    className,
+    label,
+    disabled,
+    children,
+    ...rest
+  } = props;
+
+  const classes = classNames(
+    'button',
+    { [`button--${variant}`]: variant },
+    { [`${className}`]: className }
+  );
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
+      className={classes} 
+      disabled={disabled}
+      {...rest}
     >
       {label}
+      {children}
     </button>
   );
 };
 
-Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
-  onClick: PropTypes.func,
+Button.defaultProps = {
+  variant: 'default',
 };
 
-Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
-  onClick: undefined,
+Button.propTypes = {
+  variant: PropTypes.oneOf(['default', 'secondary']),
+  className: PropTypes.string,
+  label: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };
