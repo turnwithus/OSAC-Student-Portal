@@ -1,6 +1,11 @@
 .wrapper {
   margin: 0 auto;
   max-width: 90rem;
-  padding-left: $spacing;
-  padding-right: $spacing;
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
+
+  @include mq-md {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
 }

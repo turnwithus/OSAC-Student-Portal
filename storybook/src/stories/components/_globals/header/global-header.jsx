@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Brand } from '../../blocks/brand/brand';
+import { Brand } from '../../../blocks/brand/brand';
 
 export const Header = () => (
   <header className="global-header">

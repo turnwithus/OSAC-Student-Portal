@@ -1,21 +1,15 @@
-import { Button } from './button.jsx';
+import { Wrapper } from './wrapper';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {
-  title: 'Blocks/Button',
-  component: Button,
+  title: 'Layouts/Wrapper',
+  component: Wrapper,
+  tags: ['autodocs'],
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
+export const Default = {
   args: {
     label: 'Primary',
-  },
-};
-
-export const Secondary = {
-  args: {
-    label: 'Secondary',
-    variant: 'secondary'
   },
 };

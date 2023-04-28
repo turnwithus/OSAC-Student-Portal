@@ -1,0 +1,7 @@
+$trans-delay: 0s;
+$trans-duration: .4s;
+$trans-property: all;
+$trans-function: cubic-bezier(.42, 0, .58, 1);
+
+$trans-all: $trans-property $trans-duration $trans-function $trans-delay;
+$trans-all-quick: $trans-property calc($trans-duration / 2) $trans-function $trans-delay;

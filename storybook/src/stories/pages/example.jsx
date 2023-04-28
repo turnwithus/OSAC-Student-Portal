@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Header } from '../globals/header/global-header';
-import { Footer } from '../globals/footer/global-footer';
+import { Header } from '../components/_globals/header/global-header';
+import { Footer } from '../components/_globals/footer/global-footer';
 import './example.css';
 
 export const example = () => {

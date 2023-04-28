@@ -1,15 +1,18 @@
 /* Vars */
 @import './lib/scss/vars/colors';
 @import './lib/scss/vars/measurements';
+@import './lib/scss/vars/transitions';
 
 /* Lib */
 @import './lib/scss/utility/a11y';
 @import './lib/scss/utility/layout';
 @import './lib/scss/utility/media-queries';
+@import './lib/scss/utility/reset';
 @import './lib/scss/utility/root';
 @import './lib/scss/utility/wrapper';
 
 /* Elements */
 @import './stories/blocks/button/button';
-@import './stories/globals/footer/global-footer';
-@import './stories/globals/header/global-header';
+@import './stories/blocks/link/link';
+@import './stories/components/_globals/footer/global-footer';
+@import './stories/components/_globals/header/global-header';

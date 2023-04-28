@@ -1,0 +1,26 @@
+.link {
+  color: $colorNavy;
+  transition: $trans-all-quick;
+
+  &--white {
+    border-bottom: 1px solid transparent;
+    color: $colorWhite;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: 1px solid $colorWhite;
+    }
+  }
+
+  &--icon-only {
+    opacity: 1;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: .8;
+    }
+  }
+}

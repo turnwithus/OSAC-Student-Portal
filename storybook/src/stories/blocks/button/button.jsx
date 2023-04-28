@@ -8,7 +8,6 @@ export const Button = (props) => {
     className,
     label,
     disabled,
-    children,
     ...rest
   } = props;
 
@@ -21,7 +20,6 @@ export const Button = (props) => {
   return (
     <button className={classes} disabled={disabled} {...rest}>
       {label}
-      {children}
     </button>
   );
 };
@@ -34,5 +32,4 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['default', 'secondary']),
   className: PropTypes.string,
   label: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };
