@@ -2,37 +2,34 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const Button = (props) => {
+export const {{pascalCase name}} = (props) => {
   const {
     variant,
     className,
-    label,
-    disabled,
     children,
     ...rest
   } = props;
 
   const classes = classNames(
-    'button',
-    { [`button--${variant}`]: variant },
+    '{{kebabCase name}}',
+    { [`{{kebabCase name}}--${variant}`]: variant },
     { [`${className}`]: className }
   );
 
   return (
-    <button className={classes} disabled={disabled} {...rest}>
-      {label}
+    <div className={classes} {...rest}>
+      {{kebabCase name}}
       {children}
-    </button>
+    </div>
   );
 };
 
-Button.defaultProps = {
-  variant: 'default',
+{{pascalCase name}}.defaultProps = {
+  variant: 'default'
 };
 
-Button.propTypes = {
-  variant: PropTypes.oneOf(['default', 'secondary']),
+{{pascalCase name}}.propTypes = {
+  variant: PropTypes.oneOf(['default']),
   className: PropTypes.string,
-  label: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };

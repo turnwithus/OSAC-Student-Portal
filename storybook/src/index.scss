@@ -3,11 +3,11 @@
 @import './lib/scss/vars/measurements';
 
 /* Lib */
-@import './lib/scss/lib/a11y';
-@import './lib/scss/lib/layout';
-@import './lib/scss/lib/media-queries';
-@import './lib/scss/lib/root';
-@import './lib/scss/lib/wrapper';
+@import './lib/scss/utility/a11y';
+@import './lib/scss/utility/layout';
+@import './lib/scss/utility/media-queries';
+@import './lib/scss/utility/root';
+@import './lib/scss/utility/wrapper';
 
 /* Elements */
 @import './stories/blocks/button/button';
