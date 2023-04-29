@@ -1,0 +1,15 @@
+.rhythm {
+  &,
+  &--default { & > * + * { margin-top: 1rem; } }
+  &--small { & > * + * { margin-top: .5rem; } }
+  &--large { & > * + * { margin-top: 2rem; } }
+  &--extra-large { & > * + * { margin-top: 4rem; } }
+
+  &--deep {
+    &,
+    &-default { & * + * { margin-top: 1rem; } }
+    &-small { & * + * { margin-top: .5rem; } }
+    &-large { & * + * { margin-top: 2rem; } }
+    &-extra-large { & * + * { margin-top: 4rem; } }
+  }
+}

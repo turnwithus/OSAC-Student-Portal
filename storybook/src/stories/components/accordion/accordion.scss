@@ -1,3 +1,71 @@
 .accordion {
-  /* Accordion */
+  display: block;
+  width: 100%;
+  
+  .accordion__trigger {
+    background-color: $colorNavy;
+    border: 0;
+    border-radius: .5rem;
+    color: $colorWhite;
+    cursor: pointer;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: $spacing-sm $spacing;
+    position: relative;
+    text-align: left;
+    transition: $trans-all-quick;
+    width: 100%;
+    
+    &::before,
+    &::after {
+      background-color: $colorWhite;
+      content: '';
+      display: block;
+      height: 1rem;
+      position: absolute;
+      right: $spacing;
+      top: 1.25rem;
+      transition: $trans-all-quick;
+      width: 2px;
+    }
+
+    &::before {
+      transform: rotate(0deg);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &[aria-expanded="true"] {
+      border-radius: .5rem .5rem 0 0;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .accordion__content {
+    @extend .rhythm;
+    background-color: $colorWhite;
+    border-radius: 0 0 .5rem .5rem;
+    max-height: 0vh;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 $spacing;
+    transition: $trans-all-quick;
+
+    &[aria-hidden="false"] {
+      max-height: 100vh;
+      opacity: 1;
+      overflow: auto;
+      padding: $spacing-lg $spacing;
+    }
+  }
 }

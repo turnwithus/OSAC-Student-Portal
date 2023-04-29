@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const Wrapper = (props) => {
+export const Component = (props) => {
   const {
     variant,
     className,
@@ -11,23 +11,24 @@ export const Wrapper = (props) => {
   } = props;
 
   const classes = classNames(
-    'wrapper',
-    { [`wrapper--${variant}`]: variant },
+    'component',
+    { [`component--${variant}`]: variant },
     { [`${className}`]: className }
   );
 
   return (
     <div className={classes} {...rest}>
+      component
       {children}
     </div>
   );
 };
 
-Wrapper.defaultProps = {
+Component.defaultProps = {
   variant: 'default'
 };
 
-Wrapper.propTypes = {
+Component.propTypes = {
   variant: PropTypes.oneOf(['default']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),

@@ -1,0 +1,7 @@
+.component {
+  padding: $spacing-lg 0;
+
+  & + .component {
+    padding-top: 0;
+  }
+}

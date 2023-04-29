@@ -8,10 +8,17 @@
 @import './lib/scss/utility/layout';
 @import './lib/scss/utility/media-queries';
 @import './lib/scss/utility/reset';
+@import './lib/scss/utility/rhythm';
 @import './lib/scss/utility/root';
 @import './lib/scss/utility/wrapper';
 
+/* Layouts */
+@import './stories/layouts/component/component';
+@import './stories/layouts/grid/grid';
+@import './stories/layouts/wrapper/wrapper';
+
 /* Elements */
+@import './stories/components/accordion/accordion';
 @import './stories/blocks/button/button';
 @import './stories/blocks/link/link';
 @import './stories/components/_globals/footer/global-footer';

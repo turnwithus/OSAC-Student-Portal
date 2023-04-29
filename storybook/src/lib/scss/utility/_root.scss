@@ -1,8 +1,12 @@
 html,
 body {
   color: rgba(41, 44, 48, 1);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   line-height: 1.5;
+}
+
+* {
+  font-family: inherit !important;
 }
 
 strong {
@@ -11,4 +15,13 @@ strong {
 
 em {
   font-style: italic;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.required {
+  color: $colorRed;
+  font-weight: 400;
 }
