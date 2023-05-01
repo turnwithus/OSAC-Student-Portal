@@ -22,21 +22,34 @@ export const Accordion = (props) => {
     { [`${className}`]: className }
   );
 
-  const [ariaExpanded, setAriaExpanded] = useState(false);
-  const [ariaHidden, setAriaHidden] = useState(true);
+  const [accordionOpen, setAccordionOpen] = useState(props.isOpen);
 
+  // elements in a closed accordion must not be able to be tabbed to for ADA concerns. 
+  // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
+  
+
+  const adaToggle = () => {
+    const allChildren = Array.from(
+      document.querySelectorAll('.accordion__content a,.accordion__content input,.accordion__content button')
+    );
+
+    // set the tabindex to "0" when open, and "-1" when closed
+    allChildren.forEach(element => {
+      if (element.getAttribute('tabindex') == '-1') {
+        element.setAttribute('tabindex', '0');
+      } else {
+        element.setAttribute('tabindex', '-1');
+      }
+    });
+  }
+
+  // state
   const handleToggle = () => {
-    setAriaExpanded((current) => !current);
-    setAriaHidden((current) => !current);
+    setAccordionOpen((current) => !current);
+    adaToggle();
   }
 
-  // if the `isOpen` prop is defined, open the accordion
-  if (props.isOpen !== undefined) {
-    /* infinite loop :( 
-    setAriaExpanded(true);
-    setAriaHidden(false);
-    */
-  }
+
 
   return (
     <section 
@@ -45,11 +58,11 @@ export const Accordion = (props) => {
       tabIndex="-1"
       {...rest}>
       <Wrapper>
-        <button onClick={handleToggle} aria-expanded={ariaExpanded} className="accordion__trigger" aria-controls={id} tabIndex="0">
+        <button onClick={handleToggle} aria-expanded={accordionOpen} className="accordion__trigger" aria-controls={id} tabIndex="0">
           {label} {isRequired && <i className="required">*</i>}
         </button>
 
-        <div aria-hidden={ariaHidden} className="accordion__content">
+        <div aria-hidden={!accordionOpen} className="accordion__content">
           {children}
         </div>
       </Wrapper>
@@ -61,6 +74,7 @@ Accordion.defaultProps = {
   variant: 'default',
   id: 'id100',
   label: 'Lorem ipsum dolor',
+  isOpen: false,
 };
 
 Accordion.propTypes = {

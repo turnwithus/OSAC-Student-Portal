@@ -41,12 +41,12 @@
     &[aria-expanded="true"] {
       border-radius: .5rem .5rem 0 0;
 
-      &::after {
-        transform: rotate(180deg);
-      }
-
       &::before {
         transform: rotate(90deg);
+      }
+
+      &::after {
+        opacity: 0;
       }
     }
   }
