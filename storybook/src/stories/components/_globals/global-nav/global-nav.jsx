@@ -19,7 +19,7 @@ export const GlobalNav = (props) => {
   );
 
   return (
-    <nav className={classes} aria-label="Main navigation" id="Navigation" {...rest}>
+    <nav className={classes} aria-label="Main navigation" {...rest}>
       <ul className="global-nav__main">
         <li><Link variant="main-nav" href="#Dashboard">Dashboard</Link></li>
         <li><Link variant="main-nav" href="#Grant">Grant</Link></li>
@@ -29,6 +29,7 @@ export const GlobalNav = (props) => {
         <li><Link variant="main-nav" href="#Profile">Profile</Link></li>
         <li><Link variant="main-nav" href="#Messages">Messages</Link></li>
       </ul>
+      <hr/>
       <ul className="global-nav__utility">
         <li><Link variant="main-nav" href="#Feedback">Feedback</Link></li>
         <li><Link variant="main-nav" href="#Glossary">Glossary</Link></li>

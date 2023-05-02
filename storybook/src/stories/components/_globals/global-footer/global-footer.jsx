@@ -7,7 +7,7 @@ import iconTwitter from '../../../assets/icon-twitter.svg';
 import iconFacebook from '../../../assets/icon-facebook.svg';
 import iconInstagram from '../../../assets/icon-instagram.svg';
 
-export const Footer = () => (
+export const GlobalFooter = () => (
   <footer className="global-footer">
     <div className="wrapper">
       <div className="global-footer__layout">
@@ -49,8 +49,8 @@ export const Footer = () => (
   </footer>
 );
 
-Footer.propTypes = {
+GlobalFooter.propTypes = {
 };
 
-Footer.defaultProps = {
+GlobalFooter.defaultProps = {
 };

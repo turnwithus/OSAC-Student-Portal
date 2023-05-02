@@ -21,6 +21,7 @@
 @import './stories/components/accordion/accordion';
 @import './stories/blocks/button/button';
 @import './stories/blocks/link/link';
-@import './stories/components/_globals/header/global-header';
-@import './stories/components/_globals/footer/global-footer';
+@import './stories/components/_globals/global-header/global-header';
+@import './stories/components/_globals/global-footer/global-footer';
 @import './stories/components/_globals/global-nav/global-nav';
+@import './stories/components/menu-toggle/menu-toggle.scss';

@@ -1,0 +1,51 @@
+.menu-toggle {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  height: $spacing;
+  position: relative;
+  width: $spacing;
+  z-index: 101;
+
+  i {
+    background-color: $colorWhite;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: $trans-all-quick;
+    transform-origin: top center;
+    width: $spacing;
+
+    &:nth-child(1) {
+      top: 4px;
+    }
+
+    &:nth-child(2) {
+      top: 11px;
+    }
+
+    &:nth-child(3) {
+      top: 18px;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    i {
+      &:nth-child(1) {
+        left: 1px;
+        top: 11px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        top: 11px;
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 11px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

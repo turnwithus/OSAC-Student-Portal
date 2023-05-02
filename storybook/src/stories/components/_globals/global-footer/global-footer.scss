@@ -1,7 +1,7 @@
 .global-footer {
   background-color: $colorNavy;
   color: $colorWhite;
-  padding: 3rem 0;
+  padding: $spacing 0;
 
   &__layout {
     @extend .grid;
@@ -47,12 +47,15 @@
       flex: 0 1 50%;
       font-size: .875rem;
 
+      @include mq-md {
+        margin-left: $spacing;
+      }
+
       strong {
         border-bottom: 1px solid $colorTeal;
         display: block;
         font-size: 1.25rem;
         margin-bottom: $spacing-sm;
-        margin-right: $spacing;
         padding-bottom: $spacing-xs;
       }
 

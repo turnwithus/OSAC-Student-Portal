@@ -11,11 +11,22 @@
     flex: 0 1 50%;
   
     li {
+      font-size: .875rem;
+      margin: .25rem .75rem;
+
       @include mq-md {
         display: inline-block;
       }
 
-      margin: .25rem .75rem;
+      @include mq-lg {
+        font-size: 1rem;
+      }
+
+      &:last-of-type {
+        @include mq-md {
+          margin-right: 0;
+        }
+      }
     }
   }
 
@@ -32,6 +43,18 @@
 
     .link--white {
       font-weight: normal;
+    }
+  }
+
+  hr {
+    appearance: none;
+    background-color: $colorWhite;
+    border: 0;
+    height: 1px;
+    width: 100%;
+
+    @include mq-md {
+      display: none;
     }
   }
 }

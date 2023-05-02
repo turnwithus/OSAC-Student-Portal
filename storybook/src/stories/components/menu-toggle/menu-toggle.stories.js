@@ -1,14 +1,14 @@
-import { GlobalNav } from './global-nav';
+import { MenuToggle } from './menu-toggle';
 
 export default {
-  title: 'Globals/Navigation',
-  component: GlobalNav,
+  title: 'Components/MenuToggle',
+  component: MenuToggle,
 };
 
 export const Default = () => {
   return  (
     <div style={{padding: '1em', backgroundColor: '#333333'}}>
-      <GlobalNav/>
+      <MenuToggle />
     </div>
   );
 };
