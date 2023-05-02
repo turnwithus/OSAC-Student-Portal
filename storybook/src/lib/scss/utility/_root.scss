@@ -17,7 +17,9 @@ em {
   font-style: italic;
 }
 
-img {
+img,
+svg {
+  max-width: 100%;
   vertical-align: bottom;
 }
 

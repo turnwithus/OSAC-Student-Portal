@@ -30,7 +30,7 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
-  variant: PropTypes.oneOf(['default', 'white', 'icon-only']),
+  variant: PropTypes.oneOf(['default', 'white', 'icon-only', 'main-nav']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };

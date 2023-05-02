@@ -1,0 +1,37 @@
+.global-nav {
+  display: flex;
+  flex-direction: column;
+
+  @include mq-md {
+    align-items: end;
+  }
+
+  &__main,
+  &__utility {
+    flex: 0 1 50%;
+  
+    li {
+      @include mq-md {
+        display: inline-block;
+      }
+
+      margin: .25rem .75rem;
+    }
+  }
+
+  &__main {
+    @include mq-md {
+      order: 2;
+    }
+  }
+
+  &__utility {
+    @include mq-md {
+      order: 1;
+    }
+
+    .link--white {
+      font-weight: normal;
+    }
+  }
+}

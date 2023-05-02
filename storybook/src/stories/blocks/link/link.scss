@@ -23,4 +23,9 @@
       opacity: .8;
     }
   }
+
+  &--main-nav {
+    @extend .link--white;
+    font-weight: bold;
+  }
 }
