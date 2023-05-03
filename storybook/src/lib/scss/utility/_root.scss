@@ -5,6 +5,13 @@ body {
   line-height: 1.5;
 }
 
+body {
+  &.nav-open {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
 * {
   font-family: inherit !important;
 }

@@ -26,11 +26,13 @@ export const GlobalHeader = (props) => {
   const handleToggle = () => {
     const toggle = document.querySelector('.js-menu-toggle');
     const nav = document.querySelector('.js-navigation');
+    const body = document.querySelector('body');
 
     setNavOpen((current) => !current);
 
     toggle.setAttribute('aria-expanded', navOpen);
     nav.setAttribute('aria-hidden', navOpen);
+    body.classList.toggle('nav-open');
   };
 
   return (

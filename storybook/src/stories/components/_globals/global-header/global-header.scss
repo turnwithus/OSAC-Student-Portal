@@ -1,6 +1,11 @@
 .global-header {
   background-color: $colorNavy;
+  left: 0;
   padding: $spacing-sm 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 200;
 
   @include mq-md {
     padding: $spacing 0;
@@ -12,7 +17,7 @@
   }
 
   &__brand {
-    grid-column: 1/span 3;
+    grid-column: 1/span 4;
     position: relative;
     z-index: 201;
 
@@ -42,7 +47,7 @@
     text-align: center;
     top: 0;
     z-index: 200;
-    zoom: 2;
+    zoom: 1.25;
 
     @include mq-md {
       grid-column: 3/span 10;
