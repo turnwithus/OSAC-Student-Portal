@@ -1,19 +1,20 @@
 .global-header {
   background-color: $colorNavy;
   left: 0;
-  padding: $spacing-sm 0;
   position: fixed;
   right: 0;
   top: 0;
+  transition: $trans-all-quick;
   z-index: 200;
 
-  @include mq-md {
-    padding: $spacing 0;
-  }
-
   &__layout {
-    align-items: center;
     @extend .grid;
+    align-items: center;
+    height: $headerHeightSm;
+
+    @include mq-md {
+      height: $headerHeight;
+    }
   }
 
   &__brand {
@@ -45,9 +46,9 @@
     position: fixed;
     right: 0;
     text-align: center;
-    top: 0;
+    top: $headerHeightSm;
+    transition: $trans-all;
     z-index: 200;
-    zoom: 1.25;
 
     @include mq-md {
       grid-column: 3/span 10;
@@ -56,6 +57,7 @@
       pointer-events: all;
       position: relative;
       text-align: right;
+      top: unset;
       zoom: 1;
     }
 
@@ -73,5 +75,11 @@
     @include mq-md {
       display: none;
     }
+  }
+
+  .is-scrolled & {
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition-delay: .2s;
   }
 }

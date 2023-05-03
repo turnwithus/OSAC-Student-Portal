@@ -6,9 +6,15 @@ body {
 }
 
 body {
+  padding-top: calc($headerHeightSm + $spacing) !important;
+
   &.nav-open {
     max-height: 100vh;
     overflow: hidden;
+  }
+
+  @include mq-md {
+    padding-top: calc($headerHeight + $spacing) !important;
   }
 }
 

@@ -1,9 +1,19 @@
 .global-nav {
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transition: $trans-all-quick;
+  zoom: 1.33;
 
   @include mq-md {
     align-items: end;
+    opacity: 1;
+    zoom: 1;
+  }
+
+  [aria-hidden="false"] & {
+    opacity: 1;
+    transition-delay: .25s;
   }
 
   &__main,

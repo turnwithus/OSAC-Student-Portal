@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import PropTypes from 'prop-types';
 
 import { Brand } from '../../../blocks/brand/brand';
@@ -20,6 +21,20 @@ export const GlobalHeader = (props) => {
     { [`global-header--${variant}`]: variant },
     { [`${className}`]: className }
   );
+
+  const body = document.querySelector('body');
+
+  useScrollPosition(
+    ({ prevPos, currPos }) => {
+      const isScrolled = currPos.y > prevPos.y;
+
+      if (!isScrolled) {
+        body.classList.add('is-scrolled');
+      } else {
+        body.classList.remove('is-scrolled');
+      }
+    }
+  )
 
   const [navOpen, setNavOpen] = useState(props.isOpen);
 

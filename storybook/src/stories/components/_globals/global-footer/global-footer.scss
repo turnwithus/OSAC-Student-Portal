@@ -1,6 +1,7 @@
 .global-footer {
   background-color: $colorNavy;
   color: $colorWhite;
+  margin-top: $spacing;
   padding: $spacing 0;
 
   &__layout {
@@ -38,14 +39,14 @@
       grid-row: 1/span 2;
     }
 
-    @include mq-lg {
+    @include mq-xl {
       grid-column: 9/span 4;
       grid-row: 1/span 2;
     }
 
     &-item {
       flex: 0 1 50%;
-      font-size: .875rem;
+      font-size: 1rem;
 
       @include mq-md {
         margin-left: $spacing;
@@ -60,7 +61,7 @@
       }
 
       p {
-        line-height: 1.5;
+        line-height: 1.75;
         margin-bottom: $spacing;
       }
   
