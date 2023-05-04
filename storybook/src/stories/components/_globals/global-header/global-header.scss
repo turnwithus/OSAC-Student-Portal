@@ -77,10 +77,4 @@
       display: none;
     }
   }
-
-  .is-scrolled & {
-    opacity: 0;
-    transform: translate(0, -100%);
-    transition-delay: .2s;
-  }
 }

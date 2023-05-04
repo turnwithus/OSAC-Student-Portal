@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+// import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import PropTypes from 'prop-types';
 
 import { Brand } from '../../../blocks/brand/brand';
 import { GlobalNav } from '../../../components/_globals/global-nav/global-nav';
 import { MenuToggle } from '../../menu-toggle/menu-toggle';
+import { Wrapper } from '../../../layouts/wrapper/wrapper';
 
 export const GlobalHeader = (props) => {
   const {
@@ -24,6 +25,7 @@ export const GlobalHeader = (props) => {
 
   const body = document.querySelector('body');
 
+  /* 
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const isScrolled = currPos.y > prevPos.y;
@@ -35,6 +37,7 @@ export const GlobalHeader = (props) => {
       }
     }
   )
+  */
 
   const [navOpen, setNavOpen] = useState(props.isOpen);
 
@@ -52,7 +55,7 @@ export const GlobalHeader = (props) => {
 
   return (
     <header className={classes} {...rest}>
-      <div className="wrapper">
+      <Wrapper>
         <div className="global-header__layout">
           <div className="global-header__brand">
             <Brand />
@@ -64,7 +67,7 @@ export const GlobalHeader = (props) => {
             <MenuToggle aria-expanded={navOpen} onClick={handleToggle} className="js-menu-toggle" />
           </div>
         </div>
-      </div>
+      </Wrapper>
     </header>
   );
 };

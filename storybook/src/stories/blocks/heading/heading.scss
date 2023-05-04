@@ -1,16 +1,21 @@
+$maxCharWidth: 55ch;
+
 .heading {
   font-weight: $fontBold;
 
   &--h1 {
     font-size: 3rem;
+    max-width: $maxCharWidth;
   }
 
   &--h2 {
     font-size: 1.5rem;
+    max-width: $maxCharWidth;
   }
 
   &--h3 {
     font-size: 1.25rem;
+    max-width: $maxCharWidth;
   }
 
   &--h4 {

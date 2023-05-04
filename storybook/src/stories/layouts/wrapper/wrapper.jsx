@@ -24,11 +24,11 @@ export const Wrapper = (props) => {
 };
 
 Wrapper.defaultProps = {
-  variant: 'default'
+  variant: 'default',
 };
 
 Wrapper.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'large']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };

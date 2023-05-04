@@ -1,0 +1,24 @@
+.marquis {
+  padding: 8.25rem 0;
+
+  &__layout {
+    @extend .grid;
+  }
+
+  &__content {
+    @extend .rhythm;
+    grid-column: 2/span 10;
+  }
+
+  &--dark {
+    background-color: $colorNavy;
+    color: $colorWhite;
+  }
+
+  &--centered {
+    .marquis__content {
+      background-color: pink;
+      grid-column: 3/span 8;
+    }
+  }
+}

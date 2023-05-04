@@ -5,7 +5,8 @@ body {
   line-height: 1.5;
 }
 
-body {
+/* the `:has` pseudo selector is not yet available to Firefox */
+body:has(.global-header) {
   padding-top: calc($headerHeightSm + $spacing) !important;
 
   &.nav-open {
@@ -34,6 +35,10 @@ img,
 svg {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+p {
+  max-width: 90ch;
 }
 
 .required {

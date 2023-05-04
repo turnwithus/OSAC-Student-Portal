@@ -3,7 +3,7 @@
   width: 100%;
   
   .accordion__trigger {
-    background-color: $colorNavy;
+    background-color: $colorBlack;
     border: 0;
     border-radius: .5rem;
     color: $colorWhite;
@@ -48,6 +48,11 @@
       &::after {
         opacity: 0;
       }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($colorBlack, 8%);
     }
   }
 

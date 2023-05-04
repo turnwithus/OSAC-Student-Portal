@@ -1,7 +1,7 @@
 .global-footer {
   background-color: $colorNavy;
   color: $colorWhite;
-  margin-top: $spacing;
+  margin-top: $spacing-xl;
   padding: $spacing 0;
 
   &__layout {
@@ -46,7 +46,7 @@
 
     &-item {
       flex: 0 1 50%;
-      font-size: 1rem;
+      font-size: .875rem;
 
       @include mq-md {
         margin-left: $spacing;

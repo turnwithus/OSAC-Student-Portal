@@ -6,14 +6,13 @@
 
 /* Lib */
 @import './lib/scss/utility/a11y';
-@import './lib/scss/utility/layout';
 @import './lib/scss/utility/media-queries';
 @import './lib/scss/utility/reset';
 @import './lib/scss/utility/rhythm';
 @import './lib/scss/utility/root';
-@import './lib/scss/utility/wrapper';
 
 /* Blocks */
+@import './stories/blocks/brand/brand';
 @import './stories/blocks/button/button';
 @import './stories/blocks/heading/heading/';
 @import './stories/blocks/link/link';
@@ -23,6 +22,7 @@
 @import './stories/components/_globals/global-header/global-header';
 @import './stories/components/_globals/global-footer/global-footer';
 @import './stories/components/_globals/global-nav/global-nav';
+@import './stories/components/marquis/marquis';
 @import './stories/components/menu-toggle/menu-toggle.scss';
 
 /* Layouts */

@@ -1,3 +1,15 @@
 .wrapper {
-  /* Wrapper */
+  margin: 0 auto;
+  max-width: 71rem;
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
+
+  @include mq-md {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
+
+  &--large {
+    max-width: 90rem;
+  }
 }

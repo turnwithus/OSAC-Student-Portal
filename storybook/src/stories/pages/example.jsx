@@ -4,11 +4,19 @@ import { GlobalHeader } from '../components/_globals/global-header/global-header
 import { GlobalFooter } from '../components/_globals/global-footer/global-footer';
 
 import { Accordion } from '../components/accordion/accordion';
+import { Marquis } from '../components/marquis/marquis';
 
 export const example = () => {
   return (
     <>
       <GlobalHeader/>
+
+      <Marquis
+        headingText='Almost there!'
+        subHeadingText='Congratulations on getting this far! We just need a little more information from you in order to help you match with some eligible grants and scholarships.'
+        subText='You can always edit your information within “Profile” after completing this Section.'
+      />
+
       <div className="component">
         <Accordion>
           <h2>Pages in Storybook</h2>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from '../../../blocks/link/link';
+import { Wrapper } from '../../../layouts/wrapper/wrapper';
 
 import imgHecc from '../../../assets/hecc-logo.png';
 import iconTwitter from '../../../assets/icon-twitter.svg';
@@ -9,7 +10,7 @@ import iconInstagram from '../../../assets/icon-instagram.svg';
 
 export const GlobalFooter = () => (
   <footer className="global-footer">
-    <div className="wrapper">
+    <Wrapper>
       <div className="global-footer__layout">
         <div className="global-footer__brand">
           <img src={imgHecc} alt="Higher Education Coordinating Commission" />
@@ -45,7 +46,7 @@ export const GlobalFooter = () => (
           </p>
         </div>
       </div>
-    </div>
+    </Wrapper>
   </footer>
 );
 
