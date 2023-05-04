@@ -34,10 +34,10 @@ export const Accordion = (props) => {
 
     // set the tabindex to "0" when open, and "-1" when closed
     allChildren.forEach(element => {
-      if (element.getAttribute('tabindex') == '-1') {
-        element.setAttribute('tabindex', '0');
+      if (element.getAttribute('tabIndex') === '-1') {
+        element.setAttribute('tabIndex', '0');
       } else {
-        element.setAttribute('tabindex', '-1');
+        element.setAttribute('tabIndex', '-1');
       }
     });
   }

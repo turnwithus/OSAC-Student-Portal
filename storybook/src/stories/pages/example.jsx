@@ -12,17 +12,17 @@ export const example = () => {
       <div className="component">
         <Accordion>
           <h2>Pages in Storybook</h2>
-          <p>We recommend building UIs with a <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer" tabindex="-1"><strong>component-driven</strong></a> process starting with atomic components and ending with pages.</p>
+          <p>We recommend building UIs with a <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer" tabIndex="-1"><strong>component-driven</strong></a> process starting with atomic components and ending with pages.</p>
           <p>Render pages with mock data. This makes it easy to build and review page states without needing to navigate to them in your app. Here are some handy patterns for managing page data in Storybook:</p>
           
           <form>
             <fieldset>
               <label htmlFor="input1">Input One</label>
-              <input id="input1" placeholder="Input one" type="text" tabindex="-1" />
+              <input id="input1" placeholder="Input one" type="text" tabIndex="-1" />
             </fieldset>
             <fieldset>
               <label htmlFor="input2">Input Two</label>
-              <input id="input2" placeholder="Input two" type="text" tabindex="-1" />
+              <input id="input2" placeholder="Input two" type="text" tabIndex="-1" />
             </fieldset>
           </form>
         </Accordion>
