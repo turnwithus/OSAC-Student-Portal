@@ -1,4 +1,4 @@
-import { Button } from './button.jsx';
+import { Button } from './button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {

@@ -1,7 +1,7 @@
 /* Brand colors */
 $colorNavy: #1A476E;
 $colorTeal: #33797E;
-$colorGreen: #6E9E75;
+$colorGreen: darken(#6E9E75, 11%); /* A11y contrast compliance requires higher contrast */
 $colorRed: #F03738;
 
 /* Neutrals */

@@ -26,6 +26,6 @@
 
   &--main-nav {
     @extend .link--white;
-    font-weight: bold;
+    font-weight: $fontBold;
   }
 }

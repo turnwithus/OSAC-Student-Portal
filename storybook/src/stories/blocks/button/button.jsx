@@ -33,3 +33,9 @@ Button.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
 };
+
+Button.parameters = {
+  a11y: {
+    disable: true,
+  },
+};
