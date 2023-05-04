@@ -1,17 +1,30 @@
-$button-color: #222222;
-
 .button {
-  background-color: $button-color;
+  background-color: $colorGreen;
   border: 1px solid transparent;
   border-radius: $spacing;
   cursor: pointer;
   display: block;
+  font-size: .875rem;
+  font-weight: $fontBold;
   color: $colorWhite;
-  padding: $spacing-sm $spacing;
+  padding: $spacing-xs $spacing;
+  transition: $trans-all-quick;
 
   &:hover,
   &:active,
   &:focus {
-    opacity: .85;
+    background-color: lighten($colorGreen, 5%);
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: $colorGreen;
+    color: $colorGreen;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $colorWhite;
+    }
   }
 }

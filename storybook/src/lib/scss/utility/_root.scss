@@ -1,6 +1,6 @@
 html,
 body {
-  color: rgba(41, 44, 48, 1);
+  color: #292C30;
   font-family: 'Open Sans', sans-serif !important;
   line-height: 1.5;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: $fontBold;
 }
 
 em {
@@ -32,5 +32,5 @@ svg {
 
 .required {
   color: $colorRed;
-  font-weight: 400;
+  font-weight: $fontNormal;
 }

@@ -2,6 +2,7 @@
 @import './lib/scss/vars/colors';
 @import './lib/scss/vars/measurements';
 @import './lib/scss/vars/transitions';
+@import './lib/scss/vars/type';
 
 /* Lib */
 @import './lib/scss/utility/a11y';
@@ -12,16 +13,19 @@
 @import './lib/scss/utility/root';
 @import './lib/scss/utility/wrapper';
 
-/* Layouts */
-@import './stories/layouts/component/component';
-@import './stories/layouts/grid/grid';
-@import './stories/layouts/wrapper/wrapper';
-
-/* Elements */
-@import './stories/components/accordion/accordion';
+/* Blocks */
 @import './stories/blocks/button/button';
+@import './stories/blocks/heading/heading/';
 @import './stories/blocks/link/link';
+
+/* Components */
+@import './stories/components/accordion/accordion';
 @import './stories/components/_globals/global-header/global-header';
 @import './stories/components/_globals/global-footer/global-footer';
 @import './stories/components/_globals/global-nav/global-nav';
 @import './stories/components/menu-toggle/menu-toggle.scss';
+
+/* Layouts */
+@import './stories/layouts/component/component';
+@import './stories/layouts/grid/grid';
+@import './stories/layouts/wrapper/wrapper';
