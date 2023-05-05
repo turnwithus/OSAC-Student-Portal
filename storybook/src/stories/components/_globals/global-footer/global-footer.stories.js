@@ -9,4 +9,14 @@ export default {
   },
 };
 
-export const Default = {};
+export const Default = () => {
+  return  (
+    <GlobalFooter />
+  );
+};
+
+export const Light = () => {
+  return  (
+    <GlobalFooter variant="light" />
+  );
+};

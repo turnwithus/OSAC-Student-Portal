@@ -15,17 +15,92 @@
   }
 
   &--icon-only {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: $spacing;
     opacity: 1;
+    width: $spacing;
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
-      opacity: .8;
+  &.facebook {
+    background-image: url(../../assets/icon-facebook.svg);
+  }
+
+  &.instagram {
+    background-image: url(../../assets/icon-instagram.svg);
+  }
+
+  &.twitter {
+    background-image: url(../../assets/icon-twitter.svg);
+  }
+
+  .global-footer--light & {
+    &.facebook {
+      background-image: url(../../assets/icon-facebook-black.svg);
+    }
+
+    &.instagram {
+      background-image: url(../../assets/icon-instagram-black.svg);
+    }
+  
+    &.twitter {
+      background-image: url(../../assets/icon-twitter-black.svg);
     }
   }
 
   &--main-nav {
     @extend .link--white;
     font-weight: $fontBold;
+  }
+
+  &--button,
+  &--button-white,
+  &--button-outline,
+  &--button-outline-white {
+    @extend .button;
+    text-decoration: none;
+  }
+
+  &--button {
+    color: $colorWhite;
+  }
+
+  &--button-white {
+    background-color: $colorWhite;
+    color: $colorNavy;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $colorWhite;
+    }
+  }
+
+  &--button-outline {
+    background-color: transparent;
+    border: 1px solid $colorNavy;
+    color: $colorNavy;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &--button-outline-white {
+    background-color: transparent;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
   }
 }

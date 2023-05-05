@@ -1,0 +1,59 @@
+.marquee {
+  padding: 8.25rem 0;
+
+  &__layout {
+    @extend .grid;
+    align-items: center;
+  }
+
+  &__major {
+    @extend .rhythm;
+    grid-column: 2/span 10;
+  }
+
+  &__minor {
+    background-color: pink;
+  }
+
+  &__cta {
+    margin-top: $spacing-lg;
+
+    .link + .link,
+    .button + .button {
+      margin-left: $spacing;
+    }
+  }
+
+  &--dark {
+    background-color: $colorNavy;
+    color: $colorWhite;
+  }
+
+  &--centered {
+    .marquee__major {
+      background-color: pink;
+      grid-column: 3/span 8;
+    }
+  }
+
+  &--split-image {
+    padding: 0;
+
+    .marquee__major {
+      grid-column: 1/span 12;
+
+      @include mq-md {
+        grid-column: 1/span 6;
+      }
+    }
+
+    .marquee__minor {
+      display: none;
+
+      @include mq-md {
+        display: block;
+        grid-column: 7/span 6;
+      }
+    }
+  }
+}

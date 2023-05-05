@@ -3,7 +3,7 @@
   border: 1px solid transparent;
   border-radius: $spacing;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   font-size: .875rem;
   font-weight: $fontBold;
   color: $colorWhite;
@@ -17,14 +17,20 @@
   }
 
   &--secondary {
-    background-color: transparent;
+    background-color: $colorWhite;
     border-color: $colorGreen;
     color: $colorGreen;
 
     &:hover,
     &:active,
     &:focus {
-      color: $colorWhite;
+      background-color: $colorWhite;
+      color: $colorGreen;
     }
+  }
+
+  &--white {
+    background-color: $colorWhite;
+    color: $colorNavy;
   }
 }

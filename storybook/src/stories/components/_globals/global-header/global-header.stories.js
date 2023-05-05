@@ -14,3 +14,9 @@ export const Default = () => {
     <GlobalHeader />
   );
 };
+
+export const Light = () => {
+  return  (
+    <GlobalHeader variant="light" />
+  );
+};

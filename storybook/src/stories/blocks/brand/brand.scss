@@ -1,3 +1,35 @@
 .brand {
-  transition: $trans-all;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+
+
+  &--osa,
+  &--default {
+    aspect-ratio: 216/72;
+    background-image: url(../../assets/osa-logo.svg);
+    max-width: 100%;
+    width: 10rem;
+
+    .global-header--light & {
+      background-image: url(../../assets/osa-logo-black.svg);
+    }
+  }
+
+  &--hecc {
+    aspect-ratio: 150/72;
+    background-image: url(../../assets/hecc-logo.png);
+    width: 9.375rem;
+
+    .global-footer--light & {
+      background-image: url(../../assets/hecc-logo-color.png);
+    }
+  }
+
+  &--hecc-color {
+    aspect-ratio: 150/72;
+    background-image: url(../../assets/hecc-logo-color.png);
+    width: 9.375rem;
+  }
 }

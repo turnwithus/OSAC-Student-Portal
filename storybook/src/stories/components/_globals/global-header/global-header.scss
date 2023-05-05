@@ -37,7 +37,6 @@
 
   &__nav {
     align-items: center;
-    background-color: $colorNavy;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -75,6 +74,24 @@
 
     @include mq-md {
       display: none;
+    }
+  }
+
+  &--light {
+    background-color: $colorWhite;
+    
+    .link--main-nav {
+      color: $colorNavy;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: $colorNavy;
+      }
+    }
+
+    .brand svg path {
+      fill: $colorNavy;
     }
   }
 }

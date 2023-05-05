@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-// import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import PropTypes from 'prop-types';
+// import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import { Brand } from '../../../blocks/brand/brand';
 import { GlobalNav } from '../../../components/_globals/global-nav/global-nav';
-import { MenuToggle } from '../../menu-toggle/menu-toggle';
+import { MenuToggle } from '../../../blocks/menu-toggle/menu-toggle';
 import { Wrapper } from '../../../layouts/wrapper/wrapper';
 
 export const GlobalHeader = (props) => {
@@ -78,7 +78,7 @@ GlobalHeader.defaultProps = {
 };
 
 GlobalHeader.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'light']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   isOpen: PropTypes.bool,

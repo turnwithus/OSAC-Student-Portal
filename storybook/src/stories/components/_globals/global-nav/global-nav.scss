@@ -47,12 +47,15 @@
   }
 
   &__utility {
+    font-size: .75rem;
+
     @include mq-md {
       order: 1;
     }
 
     .link--white {
-      font-weight: normal;
+      font-size: .875rem;
+      font-weight: $fontLight;
     }
   }
 

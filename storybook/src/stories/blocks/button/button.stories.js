@@ -4,6 +4,7 @@ import { Button } from './button';
 export default {
   title: 'Blocks/Button',
   component: Button,
+  tags: ['autodocs'],
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args

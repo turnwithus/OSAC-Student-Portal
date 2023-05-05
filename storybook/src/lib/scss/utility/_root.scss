@@ -7,7 +7,7 @@ body {
 
 /* the `:has` pseudo selector is not yet available to Firefox */
 body:has(.global-header) {
-  padding-top: calc($headerHeightSm + $spacing) !important;
+  padding-top: calc($headerHeightSm) !important;
 
   &.nav-open {
     max-height: 100vh;
@@ -15,7 +15,7 @@ body:has(.global-header) {
   }
 
   @include mq-md {
-    padding-top: calc($headerHeight + $spacing) !important;
+    padding-top: calc($headerHeight) !important;
   }
 }
 

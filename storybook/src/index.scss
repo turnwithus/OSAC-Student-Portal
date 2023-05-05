@@ -16,14 +16,14 @@
 @import './stories/blocks/button/button';
 @import './stories/blocks/heading/heading/';
 @import './stories/blocks/link/link';
+@import './stories/blocks/menu-toggle/menu-toggle';
 
 /* Components */
 @import './stories/components/accordion/accordion';
 @import './stories/components/_globals/global-header/global-header';
 @import './stories/components/_globals/global-footer/global-footer';
 @import './stories/components/_globals/global-nav/global-nav';
-@import './stories/components/marquis/marquis';
-@import './stories/components/menu-toggle/menu-toggle.scss';
+@import './stories/components/marquee/marquee';
 
 /* Layouts */
 @import './stories/layouts/component/component';

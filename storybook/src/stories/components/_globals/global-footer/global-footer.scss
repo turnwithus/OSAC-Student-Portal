@@ -76,4 +76,20 @@
       }
     }
   }
+
+
+  &--light {
+    background-color: $colorWhite;
+    color: $colorBlack;    
+
+    .link {
+      color: $colorNavy;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: $colorNavy;
+      }
+    }
+  }
 }

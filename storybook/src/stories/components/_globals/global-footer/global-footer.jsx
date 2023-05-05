@@ -1,19 +1,32 @@
 import React from 'react';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
+import { Brand } from '../../../blocks/brand/brand';
 import { Link } from '../../../blocks/link/link';
 import { Wrapper } from '../../../layouts/wrapper/wrapper';
 
-import imgHecc from '../../../assets/hecc-logo.png';
-import iconTwitter from '../../../assets/icon-twitter.svg';
-import iconFacebook from '../../../assets/icon-facebook.svg';
-import iconInstagram from '../../../assets/icon-instagram.svg';
 
-export const GlobalFooter = () => (
-  <footer className="global-footer">
+export const GlobalFooter = (props) => {
+  const {
+    variant,
+    className,
+    children,
+    ...rest
+  } = props;
+
+  const classes = classNames(
+    'global-footer',
+    { [`global-footer--${variant}`]: variant },
+    { [`${className}`]: className }
+  );
+
+  return (
+  <footer className={classes} {...rest}>
     <Wrapper>
       <div className="global-footer__layout">
         <div className="global-footer__brand">
-          <img src={imgHecc} alt="Higher Education Coordinating Commission" />
+          <Brand variant="hecc" />
         </div>
         <div className="global-footer__nav">
           <div className="global-footer__nav-item">
@@ -35,9 +48,9 @@ export const GlobalFooter = () => (
               Salem, OR 97302
             </p>
 
-            <Link variant="icon-only" href="#instagram"><img src={iconInstagram} alt="Instagram icon"/><span className="sr-only">Check us out on Instagram</span></Link>
-            <Link variant="icon-only" href="facebook"><img src={iconFacebook} alt="Facebook icon"/><span className="sr-only">Follow us on Facebook</span></Link>
-            <Link variant="icon-only" href="twitter"><img src={iconTwitter} alt="Twitter icon"/><span className="sr-only">Follow us on Twitter</span></Link>
+            <Link variant="icon-only" className="instagram" href="#instagram"><span className="sr-only">Check us out on Instagram</span></Link>
+            <Link variant="icon-only" className="facebook" href="facebook"><span className="sr-only">Follow us on Facebook</span></Link>
+            <Link variant="icon-only" className="twitter" href="twitter"><span className="sr-only">Follow us on Twitter</span></Link>
           </div>
         </div>
         <div className="global-footer__copy">
@@ -48,10 +61,16 @@ export const GlobalFooter = () => (
       </div>
     </Wrapper>
   </footer>
-);
-
-GlobalFooter.propTypes = {
+  );
 };
 
 GlobalFooter.defaultProps = {
+  variant: 'default',
+};
+
+GlobalFooter.propTypes = {
+  variant: PropTypes.oneOf(['default', 'light']),
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  isOpen: PropTypes.bool,
 };

@@ -49,11 +49,6 @@
         opacity: 0;
       }
     }
-
-    &:hover,
-    &:focus {
-      background-color: lighten($colorBlack, 8%);
-    }
   }
 
   .accordion__content {

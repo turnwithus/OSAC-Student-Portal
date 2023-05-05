@@ -3,16 +3,30 @@ import { Brand } from './brand';
 export default {
   title: 'Blocks/Brand',
   component: Brand,
-  decorators: [
-    (Story) => (
-      <div style={{ padding: '1em', backgroundColor: '#1A476E', width: '200px' }}>
-        <Story />
-      </div>
-    ),
-  ],
   parameters: {
     layout: 'centered',
   },
+  tags: ['autodocs'],
 };
 
-export const Default = {};
+export const OSA = () => {
+  return  (
+    <div style={{padding: '', backgroundColor: '#222'}}>
+      <Brand variant="osa" />
+    </div>
+  );
+};
+
+export const HECC = () => {
+  return  (
+    <div style={{padding: '', backgroundColor: '#222'}}>
+      <Brand variant="hecc" />
+    </div>
+  );
+};
+
+export const HECCColor = () => {
+  return  (
+    <Brand variant="hecc-color" />
+  );
+};
