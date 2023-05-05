@@ -27,11 +27,31 @@
   &--dark {
     background-color: $colorNavy;
     color: $colorWhite;
+
+    .button {
+      background-color: $colorWhite;
+      color: $colorNavy;
+
+      & + .button {
+        background-color: transparent;
+        border-color: $colorWhite;
+        color: $colorWhite;
+      }
+    }
+
+    &.marquee--split-image {
+      .button {
+        & + .button {
+          background-color: transparent;
+          border-color: $colorWhite;
+          color: $colorWhite;
+        }
+      }
+    }
   }
 
   &--centered {
     .marquee__major {
-      background-color: pink;
       grid-column: 3/span 8;
     }
   }
@@ -52,7 +72,15 @@
 
       @include mq-md {
         display: block;
-        grid-column: 7/span 6;
+        grid-column: 8/span 5;
+      }
+    }
+
+    .button {
+      & + .button {
+        background-color: transparent;
+        border-color: $colorGreen;
+        color: $colorGreen;
       }
     }
   }

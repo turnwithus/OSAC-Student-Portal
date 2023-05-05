@@ -10,6 +10,7 @@ export const Pageshell = (props) => {
     variant,
     className,
     children,
+    hasFlushFooter,
     ...rest
   } = props;
 
@@ -22,20 +23,27 @@ export const Pageshell = (props) => {
   return (
     <div className={classes} {...rest}>
       <GlobalHeader variant={variant} />
-        <main htmlid="main">
+        <main id="main">
           {children}
         </main>
-      <GlobalFooter variant={variant} />
+      {hasFlushFooter && 
+      <GlobalFooter variant={variant} className="global-footer--flush"/>
+      }
+      {!hasFlushFooter && 
+      <GlobalFooter variant={variant}/>
+      }
     </div>
   );
 };
 
 Pageshell.defaultProps = {
-  variant: 'default'
+  variant: 'default',
+  hasFlushFooter: false,
 };
 
 Pageshell.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  hasFlushFooter: PropTypes.bool,
+  variant: PropTypes.oneOf(['default', 'light']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };

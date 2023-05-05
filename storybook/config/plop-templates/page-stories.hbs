@@ -1,0 +1,21 @@
+import { Pageshell } from '../layouts/pageshell/pageshell';
+import { Marquee } from '../components/marquee/marquee';
+
+export default {
+  title: 'Pages/{{ pascalCase name}}',
+  parameters: {
+    layout: 'fullscreen',
+  },
+};
+
+export const Default = () => {
+  return  (
+    <Pageshell>
+      <Marquee
+        headingText="{{ pascalCase name}}"
+      />
+
+
+    </Pageshell>
+  );
+};

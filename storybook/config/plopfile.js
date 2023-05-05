@@ -54,7 +54,7 @@ module.exports = (plop) => {
         actions.push(
           {
             type: 'add',
-            path: '../src/ui/app/components/{{kebabCase name}}/{{kebabCase name}}.js',
+            path: '../src/stories/pages/{{kebabCase name}}.stories.js',
             templateFile: 'plop-templates/page-stories.hbs'
           }
         );

@@ -37,8 +37,8 @@ export const Marquee = (props) => {
             { subText && <Heading variant="h4" element="h3">{subText}</Heading> }
             { cta1text &&
             <div className="marquee__cta">
-              { cta1text && <Link variant="button-white" href={cta1url}>{cta1text}</Link>}
-              { cta2text && <Link variant="button-outline-white" href={cta2url}>{cta2text}</Link>}
+              { cta1text && <Link variant="button" href={cta1url}>{cta1text}</Link>}
+              { cta2text && <Link variant="button" href={cta2url}>{cta2text}</Link>}
             </div>
             }
           </div>
@@ -56,7 +56,9 @@ export const Marquee = (props) => {
 
 Marquee.defaultProps = {
   variant: 'default',
-  headingText: 'Nemo enim ipsam'
+  headingText: 'Nemo enim ipsam',
+  cta1url: '#url1',
+  cta2url: '#url2',
 };
 
 Marquee.propTypes = {

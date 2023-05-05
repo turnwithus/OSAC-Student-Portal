@@ -3,6 +3,7 @@ import { Marquee } from './marquee';
 
 import imgMarquee1 from '../../assets/marquee-fpo-1.jpg';
 import imgMarquee2 from '../../assets/marquee-fpo-2.jpg';
+import imgMarqueeStudent from '../../assets/marquee-student.jpg';
 
 export default {
   title: 'Components/Marquee',
@@ -22,11 +23,14 @@ export const Default = () => {
 
 export const SplitImage = () => {
   return  (
-    <Marquee 
-      variant="split-image"
-      headingText='Split Image'
-    >
-      <Image source={imgMarquee1} alt="Lorem ipsum" role="presentation" />
+    <Marquee
+      headingText="Welcome back, Jessi!"
+      subHeadingText="We are getting ready for the grants/scholarships for the coming year of 2024-2025."
+      subText="Before we go any further, we recommend you update your information."
+      cta1text="Update Now"
+      cta2text="No Thanks"
+      variant="split-image">
+        <Image src={imgMarqueeStudent} alt="lorem ipsum" />
     </Marquee>
   );
 };
