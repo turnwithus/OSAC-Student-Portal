@@ -17,10 +17,9 @@ export const Form = (props) => {
   );
 
   return (
-    <div className={classes} {...rest}>
-      form
+    <form className={classes} {...rest}>
       {children}
-    </div>
+    </form>
   );
 };
 

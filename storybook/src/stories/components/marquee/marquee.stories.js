@@ -1,7 +1,6 @@
 import { Image } from '../../blocks/image/image';
 import { Marquee } from './marquee';
 
-import imgMarquee1 from '../../assets/marquee-fpo-1.jpg';
 import imgMarquee2 from '../../assets/marquee-fpo-2.jpg';
 import imgMarqueeStudent from '../../assets/marquee-student.jpg';
 
@@ -61,8 +60,9 @@ export const DarkCentered = () => {
   return  (
     <Marquee 
       variant="centered"
-      headingText='Dark centered'
+      headingText='User Details'
       className="marquee--dark"
+      isLogin
     >
       
     </Marquee>

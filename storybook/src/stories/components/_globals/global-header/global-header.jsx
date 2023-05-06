@@ -23,9 +23,10 @@ export const GlobalHeader = (props) => {
     { [`${className}`]: className }
   );
 
+
+  /*
   const body = document.querySelector('body');
 
-  /* 
   useScrollPosition(
     ({ prevPos, currPos }) => {
       const isScrolled = currPos.y > prevPos.y;

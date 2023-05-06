@@ -36,11 +36,9 @@ export const White = () => {
 
 export const Button = () => {
   return  (
-    <div style={{padding: '1em', backgroundColor: '#333333'}}>
-      <Link variant="button">
-        Link Button
-      </Link>
-    </div>
+    <Link variant="button">
+      Link Button
+    </Link>
   );
 };
 

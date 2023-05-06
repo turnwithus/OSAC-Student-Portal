@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import { Button } from '../../blocks/button/button';
 import { Heading } from '../../blocks/heading/heading';
 import { Link } from '../../blocks/link/link';
 import { Wrapper } from '../../layouts/wrapper/wrapper';
@@ -18,6 +19,9 @@ export const Marquee = (props) => {
     cta1url,
     cta2text,
     cta2url,
+    isLogin,
+    isVerification,
+    isPasswordChange,
     ...rest
   } = props;
 
@@ -26,6 +30,11 @@ export const Marquee = (props) => {
     { [`marquee--${variant}`]: variant },
     { [`${className}`]: className }
   );
+
+  const sendVerification = () => {
+    alert('sending verification');
+    // your function to handle verification
+  }
 
   return (
     <div className={classes} {...rest}>
@@ -41,12 +50,19 @@ export const Marquee = (props) => {
               { cta2text && <Link variant="button" href={cta2url}>{cta2text}</Link>}
             </div>
             }
-          </div>
-          
-          { children && 
-            <div className="marquee__minor">
-              {children}
+            { isLogin && 
+            <div className="marquee__login">
+              <fieldset>
+                <input className="input" type="text" placeholder="Email address" />
+              </fieldset>
+              <Button onClick={sendVerification}>Send verification code</Button>
             </div>
+            }
+          </div>
+          { children && 
+          <div className="marquee__minor">
+            {children}
+          </div>
           }
         </div>
       </Wrapper>
@@ -65,4 +81,7 @@ Marquee.propTypes = {
   variant: PropTypes.oneOf(['default', 'split-image', 'centered', 'dark']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  isLogin: PropTypes.bool,
+  isVerification: PropTypes.bool,
+  isPasswordChange: PropTypes.bool,
 };

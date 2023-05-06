@@ -1,5 +1,4 @@
 .button {
-  background-color: $colorGreen;
   border: 1px solid transparent;
   border-radius: $spacing;
   cursor: pointer;
@@ -10,27 +9,36 @@
   padding: $spacing-xs $spacing;
   transition: $trans-all-quick;
 
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: lighten($colorGreen, 5%);
+  &--blue {
+    background-color: $colorNavy;
+    color: $colorWhite;
   }
 
-  &--secondary {
+  &--blue-outline {
+    background-color: $colorWhite;
+    border-color: $colorNavy;
+    color: $colorNavy;
+  }
+
+  &--green {
+    background-color: $colorGreen;
+    color: $colorWhite;
+  }
+
+  &--green-outline {
     background-color: $colorWhite;
     border-color: $colorGreen;
     color: $colorGreen;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $colorWhite;
-      color: $colorGreen;
-    }
   }
 
   &--white {
     background-color: $colorWhite;
     color: $colorNavy;
+  }
+
+  &--white-outline {
+    background-color: transparent;
+    border-color: $colorWhite;
+    color: $colorWhite;
   }
 }

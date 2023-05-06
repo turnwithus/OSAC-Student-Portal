@@ -8,11 +8,9 @@
 
   &__major {
     @extend .rhythm;
+    background-color: $colorWhite;
+    color: $colorNavy;
     grid-column: 2/span 10;
-  }
-
-  &__minor {
-    background-color: pink;
   }
 
   &__cta {
@@ -48,11 +46,28 @@
         }
       }
     }
+
+    .marquee__login {
+      @extend .rhythm--large;
+
+      .button {
+        background-color: $colorNavy;
+        color: $colorWhite;
+      }
+
+      .input {
+        width: 100%;
+      }
+    }
   }
 
   &--centered {
     .marquee__major {
+      @extend .rhythm;
+      border-radius: $spacing-xs;
+      color: $colorBlack;
       grid-column: 3/span 8;
+      padding: $spacing-lg $spacing;
     }
   }
 

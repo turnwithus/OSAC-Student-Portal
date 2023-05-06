@@ -81,4 +81,5 @@ Accordion.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string,
   isOpen: PropTypes.bool,
+  isRequired: PropTypes.bool,
 };

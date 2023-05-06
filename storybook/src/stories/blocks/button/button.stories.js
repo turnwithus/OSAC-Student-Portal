@@ -7,16 +7,50 @@ export default {
   tags: ['autodocs'],
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
-  args: {
-    label: 'Primary',
-  },
+
+export const Blue = () => {
+  return  (
+    <div style={{padding: '1rem', backgroundColor: '#fff'}}>
+      <Button variant="blue">Blue Button</Button>
+    </div>
+  );
+};
+export const BlueOutline = () => {
+  return  (
+    <div style={{padding: '1rem', backgroundColor: '#fff'}}>
+      <Button variant="blue-outline">Blue Outline</Button>
+    </div>
+  );
 };
 
-export const Secondary = {
-  args: {
-    label: 'Secondary',
-    variant: 'secondary'
-  },
+export const Green = () => {
+  return  (
+    <div style={{padding: '1rem', backgroundColor: '#fff'}}>
+      <Button variant="green">Green Button</Button>
+    </div>
+  );
+};
+
+export const GreenOutline = () => {
+  return  (
+    <div style={{padding: '1rem', backgroundColor: '#fff'}}>
+      <Button variant="green-outline">Green Outline</Button>
+    </div>
+  );
+};
+
+export const White = () => {
+  return  (
+    <div style={{padding: '1rem', backgroundColor: '#222'}}>
+      <Button variant="white">White Button</Button>
+    </div>
+  );
+};
+
+export const WhiteOutline = () => {
+  return  (
+    <div style={{padding: '1rem', backgroundColor: '#222'}}>
+      <Button variant="white-outline">White Outline</Button>
+    </div>
+  );
 };
