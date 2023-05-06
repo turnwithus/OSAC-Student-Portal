@@ -1,5 +1,8 @@
+@mixin mq-xs {
+  @media (min-width: 21rem) { @content; }
+}
 @mixin mq-sm {
-  @media (min-width: 30rem) { @content; }
+  @media (min-width: 32rem) { @content; }
 }
 @mixin mq-md {
   @media (min-width: 48rem) { @content; }

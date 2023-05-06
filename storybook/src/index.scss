@@ -16,14 +16,16 @@
 @import './stories/blocks/button/button';
 @import './stories/blocks/heading/heading/';
 @import './stories/blocks/input/input/';
+@import './stories/blocks/input-checkbox/input-checkbox/';
 @import './stories/blocks/link/link';
 @import './stories/blocks/menu-toggle/menu-toggle';
 
 /* Components */
-@import './stories/components/accordion/accordion';
 @import './stories/components/_globals/global-header/global-header';
 @import './stories/components/_globals/global-footer/global-footer';
 @import './stories/components/_globals/global-nav/global-nav';
+@import './stories/components/accordion/accordion';
+@import './stories/components/form/form';
 @import './stories/components/marquee/marquee';
 
 /* Layouts */

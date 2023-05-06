@@ -1,3 +1,11 @@
 .form {
-  /* Form */
+  
+}
+
+.label {
+  @extend .rhythm;
+  display: block;
+  font-size: .875rem;
+  font-weight: $fontBold;
+  margin-bottom: .5rem;
 }

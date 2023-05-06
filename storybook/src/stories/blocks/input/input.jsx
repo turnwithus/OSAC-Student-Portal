@@ -4,14 +4,15 @@ import PropTypes from 'prop-types';
 
 export const Input = (props) => {
   const {
-    variant,
-    className,
     children,
-    type,
+    className,
+    inputID,
+    isRequired,
     label,
     labelIsHidden,
-    inputID,
     placeholder,
+    type,
+    variant,
     ...rest
   } = props;
 
@@ -23,8 +24,13 @@ export const Input = (props) => {
 
   return (
     <div>
-      <label htmlFor={inputID} className={labelIsHidden ? 'label sr-only' : 'label'}>{label}</label>
-      <input id={inputID} type={type} placeholder={placeholder} className={classes} {...rest} />
+      <label 
+        htmlFor={inputID} 
+        className={labelIsHidden ? 'label sr-only' : 'label'}
+      >
+        {label} {isRequired && <i className="is-required">*</i>}
+      </label>
+      <input id={inputID} type={type} placeholder={placeholder} {...isRequired && {required: true}} className={classes} {...rest} />
     </div>
   );
 };

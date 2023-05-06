@@ -6,11 +6,3 @@
   padding: .5rem;
   width: 100%;
 }
-
-.label {
-  @extend .rhythm;
-  display: block;
-  font-size: .875rem;
-  font-weight: $fontBold;
-  margin-bottom: .5rem;
-}

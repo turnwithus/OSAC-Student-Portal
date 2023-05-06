@@ -36,12 +36,14 @@
   }
 
   &__nav {
-    align-items: center;
+    align-items: start;
+    background-color: $colorNavy;
     bottom: 0;
     display: flex;
     justify-content: center;
     left: 0;
     opacity: 0;
+    overflow: auto;
     pointer-events: none;
     position: fixed;
     right: 0;
@@ -50,7 +52,12 @@
     transition: $trans-all;
     z-index: 200;
 
+    @include mq-xs {
+      padding-top: $headerHeightSm;
+    }
+
     @include mq-md {
+      background-color: unset;
       grid-column: 3/span 10;
       justify-content: end;
       opacity: 1;

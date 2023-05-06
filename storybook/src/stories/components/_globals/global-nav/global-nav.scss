@@ -22,10 +22,19 @@
   
     li {
       font-size: .875rem;
-      margin: .25rem .75rem;
+      margin: .5rem;
+
+      @include mq-xs {
+        margin: .5rem 0;
+      }
+
+      @include mq-sm {
+        margin: .75rem 0
+      }
 
       @include mq-md {
         display: inline-block;
+        margin: .25rem .75rem;
       }
 
       @include mq-lg {
