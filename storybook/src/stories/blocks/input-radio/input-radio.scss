@@ -1,0 +1,14 @@
+.input-radio {
+  align-items: center;
+  display: flex;
+
+  .input {
+    order: 0;
+    width: auto;
+  }
+
+  .label {
+    margin: 0 0 0 1ch;
+    order: 1;
+  }
+}

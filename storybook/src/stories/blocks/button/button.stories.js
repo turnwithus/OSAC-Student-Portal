@@ -2,7 +2,7 @@ import { Button } from './button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {
-  title: 'Blocks/Button',
+  title: 'Form controls/Button',
   component: Button,
   tags: ['autodocs'],
 };

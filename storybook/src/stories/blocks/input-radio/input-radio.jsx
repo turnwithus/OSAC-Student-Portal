@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const InputCheckbox = (props) => {
+export const InputRadio = (props) => {
   const {
     variant,
     className,
@@ -15,8 +15,8 @@ export const InputCheckbox = (props) => {
   } = props;
 
   const classes = classNames(
-    'input-checkbox',
-    { [`input-checkbox--${variant}`]: variant },
+    'input-radio',
+    { [`input-radio--${variant}`]: variant },
     { [`${className}`]: className }
   );
 
@@ -25,33 +25,29 @@ export const InputCheckbox = (props) => {
   return (
     <div className={classes}>
       <label className="label" htmlFor={id}>{label}</label>
-      <input 
+      <input
         className="input"
-        type="checkbox" 
-        value={value} 
+        type="radio"
+        value={value}
         id={id}
         {...isChecked && {defaultChecked: true}} 
         onChange={() => setChecked(!checked)} 
         {...rest}
-      />      
+      />
     </div>
   );
 };
 
-InputCheckbox.defaultProps = {
+InputRadio.defaultProps = {
   variant: 'default',
-  value: 'Checkbox value',
-  id: '987654',
-  label: 'Checkbox label',
+  value: 'a',
+  id: '78543',
+  label: 'Radio label',
   isChecked: false,
 };
 
-InputCheckbox.propTypes = {
+InputRadio.propTypes = {
   variant: PropTypes.oneOf(['default']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-  id: PropTypes.string,
-  value: PropTypes.string,
-  label: PropTypes.string,
-  isChecked: PropTypes.bool,
 };
