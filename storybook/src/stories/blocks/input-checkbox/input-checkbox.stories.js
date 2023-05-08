@@ -3,6 +3,7 @@ import { InputCheckbox } from './input-checkbox';
 export default {
   title: 'Form controls/Checkbox',
   component: InputCheckbox,
+  tags: ['autodocs'],
 };
 
 export const Default = () => {
