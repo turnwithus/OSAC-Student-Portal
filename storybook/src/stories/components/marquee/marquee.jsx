@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 
 import { Button } from '../../blocks/button/button';
 import { Heading } from '../../blocks/heading/heading';
-import { Link } from '../../blocks/link/link';
+import { Image } from '../../blocks/image/image';
 import { Wrapper } from '../../layouts/wrapper/wrapper';
+
+import imgMarquee1 from '../../assets/marquee-fpo-1.jpg';
+import imgMarquee2 from '../../assets/marquee-fpo-2.jpg';
 
 export const Marquee = (props) => {
   const {
@@ -15,13 +18,15 @@ export const Marquee = (props) => {
     headingText,
     subHeadingText,
     subText,
-    cta1text,
-    cta1url,
-    cta2text,
-    cta2url,
-    isLogin,
+    btn1text,
+    btn1style,
+    btn2text,
+    btn2style,
+    isForgot,
     isVerification,
     isPasswordChange,
+    isWelcome,
+    isWelcomeBack,
     ...rest
   } = props;
 
@@ -36,6 +41,14 @@ export const Marquee = (props) => {
     // your function to handle verification
   }
 
+  const btn1Onclick = () => {
+    alert('Button 1 clicked');
+  }
+
+  const btn2Onclick = () => {
+    alert('Button 2 clicked');
+  }
+
   return (
     <div className={classes} {...rest}>
       <Wrapper>
@@ -44,24 +57,29 @@ export const Marquee = (props) => {
             <Heading variant="h1">{headingText}</Heading>
             { subHeadingText && <Heading variant="h2" element="h2">{subHeadingText}</Heading> }
             { subText && <Heading variant="h4" element="h3">{subText}</Heading> }
-            { cta1text &&
+            { btn1text &&
             <div className="marquee__cta">
-              { cta1text && <Link variant="button" href={cta1url}>{cta1text}</Link>}
-              { cta2text && <Link variant="button" href={cta2url}>{cta2text}</Link>}
+              { btn1text && <Button variant={btn1style} onClick={btn1Onclick}>{btn1text}</Button>}
+              { btn2text && <Button variant={btn2style} onClick={btn2Onclick}>{btn2text}</Button>}
             </div>
             }
-            { isLogin && 
+            { isForgot && 
             <div className="marquee__login">
               <fieldset>
                 <input className="input" type="text" placeholder="Email address" />
               </fieldset>
-              <Button onClick={sendVerification}>Send verification code</Button>
+              <Button variant="white" onClick={sendVerification}>Send verification code</Button>
             </div>
             }
           </div>
-          { children && 
-          <div className="marquee__minor">
-            {children}
+          { isWelcome && 
+          <div className="marquee__minor" role="presentation">
+            <Image source={imgMarquee1} alt="Lorem ipsum" />
+          </div>
+          }
+          { isWelcomeBack && 
+          <div className="marquee__minor" role="presentation">
+            <Image source={imgMarquee2} alt="Lorem ipsum" />
           </div>
           }
         </div>

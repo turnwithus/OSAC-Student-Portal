@@ -4,13 +4,16 @@
   background-size: contain;
   display: inline-block;
 
-
   &--osa,
   &--default {
     aspect-ratio: 216/72;
     background-image: url(../../assets/osa-logo.svg);
-    max-width: 100%;
+    max-width: 7rem;
     width: 10rem;
+
+    @include mq-md {
+      max-width: 100%;
+    }
 
     .global-header--light & {
       background-image: url(../../assets/osa-logo-black.svg);

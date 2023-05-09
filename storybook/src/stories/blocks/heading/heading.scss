@@ -4,18 +4,18 @@ $maxCharWidth: 55ch;
   font-weight: $fontBold;
 
   &--h1 {
-    font-size: 3rem;
-    max-width: $maxCharWidth;
+    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
   }
 
   &--h2 {
     font-size: 1.5rem;
-    max-width: $maxCharWidth;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   }
 
   &--h3 {
     font-size: 1.25rem;
-    max-width: $maxCharWidth;
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
   }
 
   &--h4 {

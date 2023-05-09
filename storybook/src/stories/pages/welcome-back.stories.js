@@ -1,12 +1,8 @@
 import { Pageshell } from '../layouts/pageshell/pageshell';
-
-import { Image } from '../blocks/image/image';
 import { Marquee } from '../components/marquee/marquee';
 
-import imgMarqueeStudent from '../assets/marquee-student.jpg';
-
 export default {
-  title: 'Pages/Welcome',
+  title: 'Pages/Welcome Back',
   parameters: {
     layout: 'fullscreen',
   },
@@ -14,17 +10,19 @@ export default {
 
 export const WelcomeBack = () => {
   return  (
-    <Pageshell hasFlushFooter>
+    <Pageshell hasFlushFooter variant="light">
       <Marquee
         headingText="Welcome back, Jessi!"
         subHeadingText="We are getting ready for the grants/scholarships for the coming year of 2024-2025."
         subText="Before we go any further, we recommend you update your information."
-        cta1text="Update Now"
-        cta2text="No Thanks"
+        btn1text="Update Now"
+        btn1style="white"
+        btn2text="No Thanks"
+        btn2style="white-outline"
         variant="split-image"
-      >
-          <Image src={imgMarqueeStudent} alt="lorem ipsum" />
-      </Marquee>
+        className="marquee--dark"
+        isWelcomeBack
+      />
     </Pageshell>
   );
 };

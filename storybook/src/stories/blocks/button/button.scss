@@ -1,11 +1,12 @@
 .button {
   border: 1px solid transparent;
   border-radius: $spacing;
+  color: $colorWhite;
   cursor: pointer;
   display: inline-block;
   font-size: .875rem;
   font-weight: $fontBold;
-  color: $colorWhite;
+  margin: $spacing-sm $spacing 0 0;
   padding: $spacing-xs $spacing;
   transition: $trans-all-quick;
 

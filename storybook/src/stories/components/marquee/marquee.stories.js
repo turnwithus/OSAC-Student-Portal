@@ -1,8 +1,4 @@
-import { Image } from '../../blocks/image/image';
 import { Marquee } from './marquee';
-
-import imgMarquee2 from '../../assets/marquee-fpo-2.jpg';
-import imgMarqueeStudent from '../../assets/marquee-student.jpg';
 
 export default {
   title: 'Components/Marquee',
@@ -20,67 +16,49 @@ export const Default = () => {
   );
 };
 
-export const SplitImage = () => {
-  return  (
-    <Marquee
-      headingText="Welcome back, Jessi!"
-      subHeadingText="We are getting ready for the grants/scholarships for the coming year of 2024-2025."
-      subText="Before we go any further, we recommend you update your information."
-      cta1text="Update Now"
-      cta2text="No Thanks"
-      variant="split-image">
-        <Image src={imgMarqueeStudent} alt="lorem ipsum" />
-    </Marquee>
-  );
-};
-
-export const Centered = () => {
-  return  (
-    <Marquee 
-      variant="centered"
-      headingText='Centered'
-    >
-
-    </Marquee>
-  );
-};
-
-export const Dark = () => {
-  return  (
-    <Marquee 
-      variant="dark"
-      headingText='Dark'
-    >
-      
-    </Marquee>
-  );
-};
-
-export const DarkCentered = () => {
-  return  (
-    <Marquee 
-      variant="centered"
-      headingText='User Details'
-      className="marquee--dark"
-      isLogin
-    >
-      
-    </Marquee>
-  );
-};
-
-export const SplitImageDark = () => {
+export const Welcome = () => {
   return  (
     <Marquee 
       variant='split-image'
       className='marquee--dark'
       headingText='Student Portal'
       subHeadingText='Apply for over $38 million in Grants & Scholarships'
-      subText='Login to see you applications'
-      cta1text='Returning Users Login'
-      cta2text='Create an Account'
+      subText='Login to see your applications'
+      btn1text='Returning Users Login'
+      btn1style='white'
+      btn2text='Create an Account'
+      btn2style='white-outline'
+      isWelcome
     >
-      <Image source={imgMarquee2} alt="Lorem ipsum" role="presentation" />
     </Marquee>
+  );
+};
+
+export const WelcomeBack = () => {
+  return  (
+    <Marquee
+      headingText="Welcome back, Jessi!"
+      subHeadingText="We are getting ready for the grants/scholarships for the coming year of 2024-2025."
+      subText="Before we go any further, we recommend you update your information."
+      btn1text="Update Now"
+      btn1style="white"
+      btn2text="No Thanks"
+      btn2style="white-outline"
+      variant="split-image"
+      className="marquee--dark"
+      isWelcomeBack
+    />
+  );
+};
+
+
+export const ForgotPassword = () => {
+  return  (
+    <Marquee 
+      variant="dark"
+      headingText="User details"
+      btn1style="white"
+      isForgot
+    />
   );
 };

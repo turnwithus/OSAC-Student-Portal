@@ -31,7 +31,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['blue','blue-outline','green','green-outline','white','white-outline',]),
+  variant: PropTypes.oneOf(['default', 'blue','blue-outline','green','green-outline','white','white-outline',]),
   className: PropTypes.string,
   label: PropTypes.string,
   children: PropTypes.string,

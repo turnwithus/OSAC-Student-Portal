@@ -1,8 +1,5 @@
 import { Pageshell } from '../layouts/pageshell/pageshell';
-import { Image } from '../blocks/image/image';
 import { Marquee } from '../components/marquee/marquee';
-
-import imgMarquee2 from '../assets/marquee-fpo-2.jpg';
 
 export default {
   title: 'Pages/Welcome',
@@ -20,10 +17,13 @@ export const Welcome = () => {
         headingText='Student Portal'
         subHeadingText='Apply for over $38 million in Grants & Scholarships'
         subText='Login to see your applications'
-        cta1text='Returning Users Login'
-        cta2text='Create an Account'
+        btn1text='Returning Users Login'
+        btn1style='white'
+        btn2text='Create an Account'
+        btn2style='white-outline'
+        isWelcome
       >
-        <Image source={imgMarquee2} alt="Lorem ipsum" />
       </Marquee>
-    </Pageshell>  );
+    </Pageshell>  
+  );
 };

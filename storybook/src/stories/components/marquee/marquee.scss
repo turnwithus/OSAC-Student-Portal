@@ -1,4 +1,6 @@
 .marquee {
+  background-color: $colorWhite;
+  color: $colorBlack;
   padding: 8.25rem 0;
 
   &__layout {
@@ -8,66 +10,28 @@
 
   &__major {
     @extend .rhythm;
-    background-color: $colorWhite;
     color: $colorNavy;
     grid-column: 2/span 10;
   }
 
   &__cta {
     margin-top: $spacing-lg;
-
-    .link + .link,
-    .button + .button {
-      margin-left: $spacing;
-    }
   }
 
   &--dark {
     background-color: $colorNavy;
     color: $colorWhite;
 
-    .button {
-      background-color: $colorWhite;
-      color: $colorNavy;
-
-      & + .button {
-        background-color: transparent;
-        border-color: $colorWhite;
-        color: $colorWhite;
-      }
-    }
-
-    &.marquee--split-image {
-      .button {
-        & + .button {
-          background-color: transparent;
-          border-color: $colorWhite;
-          color: $colorWhite;
-        }
-      }
+    .heading {
+      color: $colorWhite;
     }
 
     .marquee__login {
       @extend .rhythm--large;
 
-      .button {
-        background-color: $colorNavy;
-        color: $colorWhite;
-      }
-
       .input {
         width: 100%;
       }
-    }
-  }
-
-  &--centered {
-    .marquee__major {
-      @extend .rhythm;
-      border-radius: $spacing-xs;
-      color: $colorBlack;
-      grid-column: 3/span 8;
-      padding: $spacing-lg $spacing;
     }
   }
 
@@ -76,9 +40,11 @@
 
     .marquee__major {
       grid-column: 1/span 12;
+      padding: $spacing 0;
 
       @include mq-md {
         grid-column: 1/span 6;
+        padding: $spacing-lg 0;
       }
     }
 
@@ -88,14 +54,6 @@
       @include mq-md {
         display: block;
         grid-column: 8/span 5;
-      }
-    }
-
-    .button {
-      & + .button {
-        background-color: transparent;
-        border-color: $colorGreen;
-        color: $colorGreen;
       }
     }
   }
