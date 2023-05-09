@@ -12,7 +12,7 @@ export const ForgotPassword = () => {
   return  (
     <Pageshell>
       <Marquee
-        headingText="User details"
+        headingText="Please enter your email"
         btn1style="blue"
         isForgot
       />

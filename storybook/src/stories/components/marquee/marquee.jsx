@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Button } from '../../blocks/button/button';
 import { Heading } from '../../blocks/heading/heading';
 import { Image } from '../../blocks/image/image';
+import { Input } from '../../blocks/input/input';
 import { Wrapper } from '../../layouts/wrapper/wrapper';
 
 import imgMarquee1 from '../../assets/marquee-fpo-1.jpg';
@@ -27,11 +28,16 @@ export const Marquee = (props) => {
     isPasswordChange,
     isWelcome,
     isWelcomeBack,
+    isChangePassword,
+    hasAlerts,
     ...rest
   } = props;
 
   const classes = classNames(
     'marquee',
+    { isForgot },
+    { isVerification },
+    { isChangePassword },
     { [`marquee--${variant}`]: variant },
     { [`${className}`]: className }
   );
@@ -49,6 +55,10 @@ export const Marquee = (props) => {
     alert('Button 2 clicked');
   }
 
+  const verify = () => {
+    alert('Verifying...');
+  }
+
   return (
     <div className={classes} {...rest}>
       <Wrapper>
@@ -64,22 +74,44 @@ export const Marquee = (props) => {
             </div>
             }
             { isForgot && 
-            <div className="marquee__login">
+            <div className="marquee__form">
               <fieldset>
-                <input className="input" type="text" placeholder="Email address" />
+                <Input type="email" placeholder="Email address" label="Please enter your email address" labelIsHidden />
               </fieldset>
-              <Button variant="white" onClick={sendVerification}>Send verification code</Button>
+              <Button variant={btn1style} onClick={sendVerification}>Send verification code</Button>
+            </div>
+            }
+            { isVerification && 
+            <div className="marquee__form">
+              <fieldset>
+                <Input type="email" placeholder="Verification code" label="Please enter your verification code" labelIsHidden />
+              </fieldset>
+              <Button variant={btn1style} onClick={verify}>Verify</Button>
+            </div>
+            }
+            { isChangePassword && 
+            <div className="marquee__form">
+              <fieldset className="rhythm">
+                <Input type="password" placeholder="New password" label="Please enter your new desired password" labelIsHidden />
+                <Input type="password" placeholder="Confirm new password" label="Verify new password" labelIsHidden />
+              </fieldset>
+              <Button variant={btn1style} onClick={verify}>Verify</Button>
             </div>
             }
           </div>
           { isWelcome && 
           <div className="marquee__minor" role="presentation">
-            <Image source={imgMarquee1} alt="Lorem ipsum" />
+            <Image source={imgMarquee2} alt="Lorem ipsum" />
           </div>
           }
           { isWelcomeBack && 
           <div className="marquee__minor" role="presentation">
-            <Image source={imgMarquee2} alt="Lorem ipsum" />
+            <Image source={imgMarquee1} alt="Lorem ipsum" />
+          </div>
+          }
+          { children && 
+          <div className="marquee__alerts">
+            {children}
           </div>
           }
         </div>
@@ -91,8 +123,6 @@ export const Marquee = (props) => {
 Marquee.defaultProps = {
   variant: 'default',
   headingText: 'Nemo enim ipsam',
-  cta1url: '#url1',
-  cta2url: '#url2',
 };
 
 Marquee.propTypes = {

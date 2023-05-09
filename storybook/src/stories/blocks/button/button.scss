@@ -1,4 +1,5 @@
 .button {
+  background-color: $colorGreen;
   border: 1px solid transparent;
   border-radius: $spacing;
   color: $colorWhite;
@@ -6,7 +7,7 @@
   display: inline-block;
   font-size: .875rem;
   font-weight: $fontBold;
-  margin: $spacing-sm $spacing 0 0;
+  margin: $spacing $spacing 0 0;
   padding: $spacing-xs $spacing;
   transition: $trans-all-quick;
 
@@ -41,5 +42,33 @@
     background-color: transparent;
     border-color: $colorWhite;
     color: $colorWhite;
+  }
+
+  &--dismiss {
+    background-color: transparent;
+    height: 1.5rem;
+    padding: 0;
+    position: absolute;
+    right: -$spacing-sm;
+    top: -$spacing-sm;
+    width: 1.5rem;
+
+    &::before,
+    &::after {
+      background-color: $colorBlack;
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      width: .875rem;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
   }
 }

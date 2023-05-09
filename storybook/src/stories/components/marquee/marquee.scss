@@ -9,13 +9,38 @@
   }
 
   &__major {
-    @extend .rhythm;
-    color: $colorNavy;
-    grid-column: 2/span 10;
+    @extend .rhythm--large;
+    grid-column: 1/span 12;
+
+    .isForgot &,
+    .isVerification &,
+    .isChangePassword & {
+      background-color: $colorWhite;
+      border-radius: 1rem;
+      padding: $spacing;
+
+      @include mq-md {
+        grid-column: 2/span 10;
+        padding: $spacing-lg;
+      }
+
+      .heading {
+        color: $colorBlack;
+      }
+    }
   }
 
   &__cta {
     margin-top: $spacing-lg;
+  }
+
+  &__forgot {
+    background-color: $colorWhite;
+  }
+
+  &__alerts {
+    grid-column: 1/span 10;
+    grid-row: 2;
   }
 
   &--dark {
@@ -24,14 +49,6 @@
 
     .heading {
       color: $colorWhite;
-    }
-
-    .marquee__login {
-      @extend .rhythm--large;
-
-      .input {
-        width: 100%;
-      }
     }
   }
 

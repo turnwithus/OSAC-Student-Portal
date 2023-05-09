@@ -1,0 +1,23 @@
+.alert {
+  @extend .rhythm;
+  background-color: $bgAlert;
+  border-radius: .5rem;
+  margin: $spacing 0;
+  padding: $spacing-sm $spacing-lg $spacing-sm $spacing-sm;
+  position: relative;
+
+  strong {
+    color: $colorNavy;
+    font-size: 1.125rem;
+  }
+
+  p {
+    font-size: .875rem;
+    max-width: unset;
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+    visibility: hidden;
+  }
+}

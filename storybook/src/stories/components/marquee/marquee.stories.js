@@ -1,5 +1,7 @@
 import { Marquee } from './marquee';
 
+import { Alert } from '../../components/alert/alert';
+
 export default {
   title: 'Components/Marquee',
   component: Marquee, 
@@ -51,14 +53,50 @@ export const WelcomeBack = () => {
   );
 };
 
-
 export const ForgotPassword = () => {
   return  (
     <Marquee 
       variant="dark"
       headingText="User details"
-      btn1style="white"
+      btn1style="blue"
       isForgot
     />
+  );
+};
+
+export const VerificationCode = () => {
+  return  (
+    <Marquee 
+      variant="dark"
+      headingText="User details"
+      subHeadingText="A verification code has been sent to your inbox. Please copy it to the input box below."
+      btn1style="blue"
+      isVerification
+    />
+  );
+};
+
+export const ChangePassword = () => {
+  return  (
+    <Marquee 
+      variant="dark"
+      headingText="Reset password"
+      btn1style="blue"
+      isChangePassword
+    />
+  );
+};
+
+export const PromptingUpdates = () => {
+  return  (
+    <Marquee  
+      headingText="Update your information -- Section 1"
+      subHeadingText="Please make sure your information is current."
+    >
+      <Alert>
+        <strong>Recommended Updates</strong>
+        <p>Please update within these sections: High School Information, College Information and College of Choice, Standing, & Plan</p>
+      </Alert>
+    </Marquee>
   );
 };
