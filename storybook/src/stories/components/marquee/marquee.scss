@@ -14,9 +14,11 @@
 
     .isForgot &,
     .isVerification &,
-    .isChangePassword & {
+    .isChangePassword &,
+    .isSignIn & {
       background-color: $colorWhite;
       border-radius: 1rem;
+      color: $colorBlack;
       padding: $spacing;
 
       @include mq-md {

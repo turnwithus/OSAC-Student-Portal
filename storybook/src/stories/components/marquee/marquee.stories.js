@@ -87,6 +87,17 @@ export const ChangePassword = () => {
   );
 };
 
+export const SignIn = () => {
+  return  (
+    <Marquee 
+      variant="dark"
+      headingText="Reset password"
+      btn1style="blue"
+      isSignIn
+    />
+  );
+};
+
 export const PromptingUpdates = () => {
   return  (
     <Marquee  

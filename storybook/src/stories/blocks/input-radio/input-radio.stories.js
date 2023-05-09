@@ -25,9 +25,9 @@ export const Composed = () => {
 export const Disabled = () => {
   return  (
     <>
-      <InputRadio id="ag5678" name="example" value="yes" label="Yes" disabled />
-      <InputRadio id="hg6789" name="example" value="no" label="No" disabled />
-      <InputRadio id="ft2314" name="example" value="not applicable" label="Not applicable" disabled />
+      <InputRadio id="ag15678" name="example" value="yes" label="Yes" disabled />
+      <InputRadio id="hg16789" name="example" value="no" label="No" disabled />
+      <InputRadio id="ft12314" name="example" value="not applicable" label="Not applicable" disabled />
     </>
   );
 };

@@ -12,10 +12,10 @@ export const SignIn = () => {
   return  (
     <Pageshell>
       <Marquee
+        variant="dark"
         headingText="SignIn"
-        isSignin
+        isSignIn
       />
-
 
     </Pageshell>
   );
