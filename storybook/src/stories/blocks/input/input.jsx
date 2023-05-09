@@ -6,6 +6,7 @@ export const Input = (props) => {
   const {
     children,
     className,
+    hasError,
     inputID,
     isRequired,
     label,
@@ -18,6 +19,7 @@ export const Input = (props) => {
 
   const classes = classNames(
     'input',
+    { hasError },
     { [`input--${variant}`]: variant },
     { [`${className}`]: className }
   );

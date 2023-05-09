@@ -5,11 +5,16 @@
   color: $colorWhite;
   cursor: pointer;
   display: inline-block;
-  font-size: .875rem;
-  font-weight: $fontBold;
+  font-size: .75rem;
   margin: $spacing $spacing 0 0;
-  padding: $spacing-xs $spacing;
+  padding: .5em .75em;
   transition: $trans-all-quick;
+
+  @include mq-md {
+    font-size: clamp(.75rem, 2.5vw, .875rem);
+    font-weight: $fontBold;
+    padding: $spacing-xs $spacing;
+  }
 
   &--blue {
     background-color: $colorNavy;

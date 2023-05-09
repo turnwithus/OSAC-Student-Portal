@@ -91,9 +91,20 @@ export const SignIn = () => {
   return  (
     <Marquee 
       variant="dark"
-      headingText="Reset password"
+      headingText="Please sign in"
       btn1style="blue"
       isSignIn
+    />
+  );
+};
+
+export const WrongCredentials = () => {
+  return  (
+    <Marquee 
+      variant="dark"
+      headingText="Please sign in"
+      btn1style="blue"
+      isWrongCredentials
     />
   );
 };

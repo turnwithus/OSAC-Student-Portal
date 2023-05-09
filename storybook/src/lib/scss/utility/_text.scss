@@ -1,0 +1,9 @@
+.error {
+  color: darken($colorRed, 10%); /* ADA compliance requires darker color*/
+  font-weight: $fontBold;
+}
+
+.required {
+  color: $colorRed;
+  font-weight: $fontNormal;
+}

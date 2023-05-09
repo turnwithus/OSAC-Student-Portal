@@ -1,6 +1,7 @@
 html,
 body {
   color: #292C30;
+  font-size: clamp(.875rem, 2.5vw, 1rem);
   font-family: 'Open Sans', sans-serif !important;
   line-height: 1.5;
 }
@@ -40,9 +41,4 @@ svg {
 
 p {
   max-width: 90ch;
-}
-
-.required {
-  color: $colorRed;
-  font-weight: $fontNormal;
 }

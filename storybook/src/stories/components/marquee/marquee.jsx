@@ -31,6 +31,7 @@ export const Marquee = (props) => {
     isWelcomeBack,
     isChangePassword,
     isSignIn,
+    isWrongCredentials,
     hasAlerts,
     ...rest
   } = props;
@@ -41,6 +42,7 @@ export const Marquee = (props) => {
     { isVerification },
     { isChangePassword },
     { isSignIn },
+    { isWrongCredentials },
     { [`marquee--${variant}`]: variant },
     { [`${className}`]: className }
   );
@@ -82,7 +84,7 @@ export const Marquee = (props) => {
             }
 
             { isSignIn && 
-            <div className="marquee__form">
+            <div className="marquee__form rhythm">
               <fieldset className="rhythm">
                 <Input id="hv765" type="email" placeholder="Email address" label="Please enter your email address" labelIsHidden />
                 <Input id="hv795" type="password" placeholder="Password" label="Please enter your password" labelIsHidden />
@@ -90,7 +92,21 @@ export const Marquee = (props) => {
                 <Link>Forgot your password?</Link>
               </fieldset>
               <Button variant={btn1style} onClick={signIn}>Sign in</Button>
-              <i>Don't have an account? <Link>Create and account</Link></i>
+              <p>Don't have an account? <Link>Create an account</Link></p>
+            </div>
+            }
+
+            { isWrongCredentials && 
+            <div className="marquee__form rhythm">
+              <span className="error">Your password is incorrect.</span>
+              <fieldset className="rhythm">
+                <Input id="hv765" type="email" placeholder="Email address" defaultValue="user@domain.com" label="Please enter your email address" labelIsHidden />
+                <Input id="hv795" type="password" placeholder="Password" defaultValue="wrongPassword1234$" label="Please enter your password" hasError labelIsHidden />
+                <br />
+                <Link>Forgot your password?</Link>
+              </fieldset>
+              <Button variant={btn1style} onClick={signIn}>Sign in</Button>
+              <p>Don't have an account? <Link>Create an account</Link></p>
             </div>
             }
 

@@ -5,4 +5,9 @@
   max-width: 42rem;
   padding: .5rem;
   width: 100%;
+
+  &:invalid,
+  &.hasError {
+    border-color: $colorRed;
+  }
 }
