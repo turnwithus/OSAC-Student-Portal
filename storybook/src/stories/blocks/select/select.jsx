@@ -21,7 +21,7 @@ export const Select = (props) => {
   return (
     <div>
       <label htmlFor={id} className="label">{label}</label>
-      <select id={id} className={classes} {...rest}>
+      <select tabIndex="-1" id={id} className={classes} {...rest}>
         {children}
       </select>
     </div>

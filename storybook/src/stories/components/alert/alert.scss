@@ -20,4 +20,15 @@
     display: none;
     visibility: hidden;
   }
+
+  &--info {
+    background-color: transparent;
+    background-image: url(../../assets/icon-alert-info.svg);
+    background-position: top .1rem left;
+    background-repeat: no-repeat;
+    color: $colorRed;
+    font-size: .75rem;
+    margin: 1em 0;
+    padding: 0 0 0 $spacing;
+  }
 }

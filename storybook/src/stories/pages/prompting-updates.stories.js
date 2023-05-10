@@ -19,7 +19,7 @@ export const PromptingUpdates = () => {
         headingText="Update your information -- Section 1"
         subHeadingText="Please make sure your information is current."
       >
-        <Alert>
+        <Alert isDismissable>
           <strong>Recommended Updates</strong>
           <p>Please update within these sections: High School Information, College Information and College of Choice, Standing, & Plan</p>
         </Alert>

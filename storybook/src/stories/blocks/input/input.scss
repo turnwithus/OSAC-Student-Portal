@@ -9,4 +9,8 @@
   &.hasError {
     border-color: $colorRed;
   }
+  
+  & + * {
+    margin-top: .25rem;
+  }
 }

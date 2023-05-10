@@ -1,7 +1,7 @@
 import { GlobalNav } from './global-nav';
 
 export default {
-  title: 'Globals/Navigation',
+  title: 'components/Globals/Navigation',
   component: GlobalNav,
 };
 

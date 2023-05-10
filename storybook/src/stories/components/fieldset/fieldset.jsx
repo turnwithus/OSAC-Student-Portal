@@ -28,7 +28,7 @@ Fieldset.defaultProps = {
 };
 
 Fieldset.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'tight']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };

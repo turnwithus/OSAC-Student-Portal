@@ -32,3 +32,11 @@ export const Multiple = () => {
     </>
   );
 };
+
+export const Info = () => {
+  return  (
+      <Alert variant="info">
+        <p>Neque laoreet suspendisse interdum consectetur. Tincidunt eget nullam non nisi est.</p>
+      </Alert>
+  );
+};

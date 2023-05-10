@@ -10,3 +10,9 @@ export const Default = () => {
     <Fieldset>Default Fieldset</Fieldset>
   );
 };
+
+export const Tight = () => {
+  return  (
+    <Fieldset variant="tight">Default Fieldset</Fieldset>
+  );
+};
