@@ -30,6 +30,7 @@ export const InputRadio = (props) => {
         type="radio"
         value={value}
         id={id}
+        tabIndex="-1"
         {...isChecked && {defaultChecked: true}} 
         onChange={() => setChecked(!checked)} 
         {...rest}

@@ -29,11 +29,14 @@ export const Accordion = (props) => {
   
   const adaToggle = () => {
     const allChildren = Array.from(
-      document.querySelectorAll('.accordion__content a,.accordion__content input,.accordion__content button')
+      document.querySelectorAll('.accordion__content .link,.accordion__content .input,.accordion__content .button,.accordion__content .label,.accordion__content .select,.accordion__content .form,.accordion__content .fieldset')
     );
+
+    console.log(allChildren);
 
     // set the tabindex to "0" when open, and "-1" when closed
     allChildren.forEach(element => {
+      console.log('element: ' + element.className + ' tabIndex: ' + element.getAttribute('tabIndex'));
       if (element.getAttribute('tabIndex') === '-1') {
         element.setAttribute('tabIndex', '0');
       } else {

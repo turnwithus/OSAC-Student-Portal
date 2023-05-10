@@ -1,7 +1,7 @@
 import { InputRadio } from './input-radio';
 
 export default {
-  title: 'Form controls/Radio',
+  title: 'Blocks/Form controls/Radio',
   component: InputRadio,
   tags: ['autodocs'],
 };

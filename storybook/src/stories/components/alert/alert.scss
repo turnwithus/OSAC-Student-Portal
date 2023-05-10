@@ -1,9 +1,9 @@
 .alert {
-  @extend .rhythm;
+  @extend .rhythm--small;
   background-color: $bgAlert;
   border-radius: .5rem;
   margin: $spacing 0;
-  padding: $spacing-sm $spacing-lg $spacing-sm $spacing-sm;
+  padding: $spacing-sm $spacing-lg $spacing-sm $spacing;
   position: relative;
 
   strong {

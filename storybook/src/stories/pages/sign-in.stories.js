@@ -10,7 +10,7 @@ export default {
 
 export const SignIn = () => {
   return  (
-    <Pageshell>
+    <Pageshell hasFlushFooter variant="light">
       <Marquee
         variant="dark"
         headingText="SignIn"

@@ -6,7 +6,6 @@ export const Button = (props) => {
   const {
     variant,
     className,
-    label,
     children,
     disabled,
     ...rest
@@ -19,8 +18,7 @@ export const Button = (props) => {
   );
 
   return (
-    <button className={classes} disabled={disabled} {...rest}>
-      {label}
+    <button className={classes} tabIndex="-1" disabled={disabled} {...rest}>
       {children}
     </button>
   );
@@ -28,11 +26,12 @@ export const Button = (props) => {
 
 Button.defaultProps = {
   variant: 'default',
+  disabled: false
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['default', 'blue','blue-outline','green','green-outline','white','white-outline', 'dismiss']),
+  variant: PropTypes.oneOf(['default', 'blue','blue-outline','green','green-outline','white','white-outline', 'dismiss', 'plain']),
   className: PropTypes.string,
-  label: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  disabled: PropTypes.bool,
 };

@@ -1,6 +1,10 @@
 .accordion {
   display: block;
   width: 100%;
+
+  & + .accordion {
+    margin-top: $spacing;
+  }
   
   .accordion__trigger {
     background-color: $colorBlack;

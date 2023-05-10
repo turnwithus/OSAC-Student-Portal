@@ -76,4 +76,14 @@
       transform: rotate(45deg);
     }
   }
+
+  &--plain {
+    background-color: unset;
+    border-bottom: 1px solid $colorNavy;
+    border-radius: 0;
+    color: $colorNavy;
+    font-size: .75rem;
+    margin-top: unset;
+    padding: 0;
+  }
 }

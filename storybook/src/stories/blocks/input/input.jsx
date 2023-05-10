@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -7,12 +7,14 @@ export const Input = (props) => {
     children,
     className,
     hasError,
-    inputID,
+    hasAction,
+    id,
     isRequired,
     label,
     labelIsHidden,
     placeholder,
     type,
+    tabIndex,
     variant,
     ...rest
   } = props;
@@ -27,12 +29,21 @@ export const Input = (props) => {
   return (
     <div>
       <label 
-        htmlFor={inputID} 
+        htmlFor={id} 
         className={labelIsHidden ? 'label sr-only' : 'label'}
       >
-        {label} {isRequired && <i className="is-required">*</i>}
+        {label} {isRequired && <i className="required">*</i>}
       </label>
-      <input id={inputID} type={type} placeholder={placeholder} {...isRequired && {required: true}} className={classes} {...rest} />
+      <input 
+        id={id} 
+        type={type} 
+        placeholder={placeholder} 
+        className={classes} 
+        tabIndex={tabIndex}
+        {...isRequired && {required: true}} 
+        {...rest} 
+      />
+      {children}
     </div>
   );
 };
@@ -42,7 +53,8 @@ Input.defaultProps = {
   type: 'text',
   label: 'Input label text',
   placeholder: 'Please enter a value...',
-  inputID: '54768',
+  id: 'input567',
+  tabIndex: '-1',
 };
 
 Input.propTypes = {
@@ -52,4 +64,6 @@ Input.propTypes = {
   type: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
+  tabIndex: PropTypes.string,
+  id: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

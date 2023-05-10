@@ -1,0 +1,11 @@
+.fieldset {
+  display: grid;
+  grid-gap: $spacing;
+  padding: 0 0 $spacing-lg 0;
+
+  .form--2col & {
+    @include mq-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

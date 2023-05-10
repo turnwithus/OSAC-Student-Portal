@@ -10,10 +10,11 @@ export default {
 
 export const ForgotPassword = () => {
   return  (
-    <Pageshell>
+    <Pageshell variant="light">
       <Marquee
         headingText="Please enter your email"
         btn1style="blue"
+        variant="dark"
         isForgot
       />
 

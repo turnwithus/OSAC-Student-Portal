@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const Form = (props) => {
+export const Fieldset = (props) => {
   const {
     variant,
     className,
@@ -11,26 +11,24 @@ export const Form = (props) => {
   } = props;
 
   const classes = classNames(
-    'form',
-    { [`form--${variant}`]: variant },
+    'fieldset',
+    { [`fieldset--${variant}`]: variant },
     { [`${className}`]: className }
   );
 
   return (
-    <form className={classes} {...rest}>
-      <div className="form__layout">
-        {children}
-      </div>
-    </form>
+    <fieldset className={classes} {...rest}>
+      {children}
+    </fieldset>
   );
 };
 
-Form.defaultProps = {
-  variant: 'default',
+Fieldset.defaultProps = {
+  variant: 'default'
 };
 
-Form.propTypes = {
-  variant: PropTypes.oneOf(['default', '2col']),
+Fieldset.propTypes = {
+  variant: PropTypes.oneOf(['default']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -30,6 +30,7 @@ export const InputCheckbox = (props) => {
         type="checkbox" 
         value={value} 
         id={id}
+        tabIndex="-1"
         {...isChecked && {defaultChecked: true}} 
         onChange={() => setChecked(!checked)} 
         {...rest}
@@ -41,7 +42,7 @@ export const InputCheckbox = (props) => {
 InputCheckbox.defaultProps = {
   variant: 'default',
   value: 'Checkbox value',
-  id: '987654',
+  id: { useId },
   label: 'Checkbox label',
   isChecked: false,
 };
@@ -50,7 +51,7 @@ InputCheckbox.propTypes = {
   variant: PropTypes.oneOf(['default']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-  id: PropTypes.string,
+  id: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   value: PropTypes.string,
   label: PropTypes.string,
   isChecked: PropTypes.bool,

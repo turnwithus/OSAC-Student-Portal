@@ -6,7 +6,6 @@
   padding: .5rem;
   width: 100%;
 
-  &:invalid,
   &.hasError {
     border-color: $colorRed;
   }

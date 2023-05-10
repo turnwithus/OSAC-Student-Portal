@@ -1,7 +1,7 @@
 import { Input } from './input';
 
 export default {
-  title: 'Form controls/Input',
+  title: 'Blocks/Form controls/Input',
   component: Input,
   tags: ['autodocs'],
   argTypes: { label: { control: 'text' }}
@@ -32,7 +32,7 @@ export const Password = () => {
   return  (
     <Input 
       type="password" 
-      label="Password" 
+      label="Password"
       placeholder="Enter your password..." />
   );
 };
@@ -50,7 +50,8 @@ export const Date = () => {
   return  (
     <Input 
       type="date" 
-      label="Type or select a date" 
+      label="Type or select a date"
+      defaultValue="1998-10-31"
     />
   );
 };
@@ -60,6 +61,7 @@ export const DateTime = () => {
     <Input 
       type="datetime-local" 
       label="Type or select a date and time" 
+      defaultValue="2018-06-12T19:30"
     />
   );
 };

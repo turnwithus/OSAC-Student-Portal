@@ -39,11 +39,10 @@ export const Alert = (props) => {
 
 Alert.defaultProps = {
   variant: 'default',
-  isDismissable: true,
 };
 
 Alert.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'info']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   isDismissable: PropTypes.bool,
