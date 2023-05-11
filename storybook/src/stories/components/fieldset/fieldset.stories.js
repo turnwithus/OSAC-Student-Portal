@@ -1,3 +1,4 @@
+import { Input } from '../../blocks/input/input'
 import { InputRadio } from '../../blocks/input-radio/input-radio';
 import { Fieldset } from './fieldset';
 
@@ -8,27 +9,42 @@ export default {
 
 export const Default = () => {
   return  (
-    <Fieldset>
-
-    </Fieldset>
-  );
-};
-
-export const OneCol = () => {
-  return  (
     <Fieldset 
-      fieldsetText="In a two-column form, sometimes a 1col fieldset is required:"
-      variant="1col">
-
-    </Fieldset>
+      labelText="Optional label"
+      subLabelText="Optional sub-label text"
+      infoText="Optional info text"
+    />
   );
 };
 
+export const NoLabel = () => {
+  return  (
+    <Fieldset >
+      <Input id="text767522" label="Label 1" />
+      <Input id="text767524" label="Label 2" />
+    </Fieldset>
+  );
+};
 
 export const Composed = () => {
   return  (
     <Fieldset 
-      fieldsetText="In a two-column form, sometimes a 1col fieldset is required:"
+      labelText="Lorem Ipsum Dolor"
+      subLabelText="Optional sub-label text"
+      infoText="Optional info text"
+    >
+      <Input id="text76752" label="Label 1" />
+      <Input id="text76754" label="Label 2" />
+    </Fieldset>
+  );
+};
+
+export const OneColumnComposed = () => {
+  return  (
+    <Fieldset 
+      labelText="Lorem Ipsum Dolor"
+      subLabelText="Optional sub-label text"
+      infoText="Optional info text"
       variant="1col">
         <InputRadio id="radio4532" label="yes" />
         <InputRadio id="radio4532" label="no" />

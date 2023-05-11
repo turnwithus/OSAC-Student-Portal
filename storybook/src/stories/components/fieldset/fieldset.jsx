@@ -24,6 +24,12 @@ export const Fieldset = (props) => {
       { labelText && 
         <p className="fieldset__label">{labelText}</p>
       }
+      { subLabelText && 
+        <p className="fieldset__sublabel">{subLabelText}</p>
+      }
+      { infoText && 
+        <p className="fieldset__infotext">{infoText}</p>
+      }
       {children}
     </fieldset>
   );

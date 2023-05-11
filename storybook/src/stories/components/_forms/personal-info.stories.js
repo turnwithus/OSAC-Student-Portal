@@ -6,6 +6,7 @@ import { Fieldset } from '../fieldset/fieldset';
 import { Input } from '../../blocks/input/input';
 import { InputCheckbox } from '../../blocks/input-checkbox/input-checkbox';
 import { InputRadio } from '../../blocks/input-radio/input-radio';
+import { ProgressBar } from '../progress-bar/progress-bar';
 import { Select } from '../../blocks/select/select';
 
 export default {
@@ -23,7 +24,6 @@ export const PersonalInfo = () => {
       id="accordion-personal-info-form"
       label="Personal Information"
       isRequired
-      isOpen
     >
       <Form variant="2col">
         <Fieldset>
@@ -148,6 +148,7 @@ export const PersonalInfo = () => {
           <InputRadio id="uscitizen5679" name="uscitizen" value="no" label="No" />
         </Fieldset>
         <Button onClick={SaveForm}>Update</Button>
+        <ProgressBar />
       </Form>
 
     </Accordion>

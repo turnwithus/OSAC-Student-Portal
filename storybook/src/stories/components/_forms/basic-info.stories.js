@@ -51,7 +51,7 @@ export const BasicInfo = () => {
           <Input id="PI-birth" type="date" label="Birthdate" defaultValue="1996-07-22" isRequired />
         </Fieldset>
         <Button onClick={SaveForm}>Save</Button>
-        <ProgressBar progress={60} />
+        <ProgressBar progress={40} />
       </Form>
 
     </Accordion>

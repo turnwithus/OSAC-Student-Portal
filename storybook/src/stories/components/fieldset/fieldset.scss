@@ -1,6 +1,6 @@
 .fieldset {
   display: grid;
-  grid-gap: $spacing;
+  grid-gap: $spacing-sm;
   margin: 0 0 $spacing-lg 0;
 
   .form--2col &:not(.fieldset--1col) {
@@ -34,5 +34,20 @@
   &__label {
     @extend .label;
     grid-column: 1/span 12;
+  }
+
+  &__sublabel,
+  &__infotext {
+    grid-column: 1/span 12;
+    font-size: .875rem;
+  }
+
+  &__sublabel {
+    margin: -.25rem 0;
+  }
+
+  &__infotext {
+    background-color: rgba(26, 71, 110, 0.1);
+    padding: $spacing-xs;
   }
 }
