@@ -5,6 +5,7 @@ import { Form } from '../form/form';
 import { Fieldset } from '../fieldset/fieldset';
 import { Input } from '../../blocks/input/input';
 import { InputCheckbox } from '../../blocks/input-checkbox/input-checkbox';
+import { InputRadio } from '../../blocks/input-radio/input-radio';
 import { Select } from '../../blocks/select/select';
 
 export default {
@@ -22,6 +23,7 @@ export const PersonalInfo = () => {
       id="accordion-personal-info-form"
       label="Personal Information"
       isRequired
+      isOpen
     >
       <Form variant="2col">
         <Fieldset>
@@ -56,7 +58,7 @@ export const PersonalInfo = () => {
             <InputCheckbox 
             id="inputOK2txt"
             label="Text about updates"
-            checked />
+            isChecked />
           </Input>
           <Input 
             id="inputHousePhone"
@@ -122,8 +124,28 @@ export const PersonalInfo = () => {
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </Select>
+          <Input 
+            id="county4536" 
+            label="County" 
+            isRequired
+          />
+          <Input 
+            id="city6789" 
+            label="City" 
+            isRequired
+          />
+          <Input 
+            id="zip6783" 
+            label="Zip Code" 
+            isRequired
+          />
         </Fieldset>
-        <Fieldset>
+        <Fieldset
+          labelText="Are you a U.S Citizen?"
+          variant="1col"
+        >
+          <InputRadio id="uscitizen5678" name="uscitizen" value="yes" label="Yes" isChecked />
+          <InputRadio id="uscitizen5679" name="uscitizen" value="no" label="No" />
         </Fieldset>
         <Button onClick={SaveForm}>Update</Button>
       </Form>

@@ -42,3 +42,7 @@ svg {
 p {
   max-width: 90ch;
 }
+
+::selection {
+  background-color: rgba(110, 158, 117, 0.1);
+}

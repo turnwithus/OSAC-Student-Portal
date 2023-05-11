@@ -86,8 +86,20 @@ export const Marquee = (props) => {
             { isSignIn && 
             <div className="marquee__form rhythm">
               <fieldset className="rhythm">
-                <Input id="hv765" type="email" placeholder="Email address" label="Please enter your email address" labelIsHidden />
-                <Input id="hv795" type="password" placeholder="Password" label="Please enter your password" labelIsHidden />
+                <Input 
+                  id="hv76534" 
+                  type="email" 
+                  placeholder="Email address" 
+                  label="Please enter your email address" 
+                  labelIsHidden 
+                />
+                <Input 
+                  id="hv79587" 
+                  type="password" 
+                  placeholder="Password" 
+                  label="Please enter your password" 
+                  labelIsHidden 
+                />
                 <br />
                 <Link>Forgot your password?</Link>
               </fieldset>
@@ -100,8 +112,23 @@ export const Marquee = (props) => {
             <div className="marquee__form rhythm">
               <span className="error">Your password is incorrect.</span>
               <fieldset className="rhythm">
-                <Input id="hv765" type="email" placeholder="Email address" defaultValue="user@domain.com" label="Please enter your email address" labelIsHidden />
-                <Input id="hv795" type="password" placeholder="Password" defaultValue="wrongPassword1234$" label="Please enter your password" hasError labelIsHidden />
+                <Input 
+                  id="hv765" 
+                  type="email" 
+                  placeholder="Email address" 
+                  defaultValue="user@domain.com" 
+                  label="Please enter your email address" 
+                  labelIsHidden 
+                />
+                <Input 
+                  id="hv795" 
+                  type="password" 
+                  placeholder="Password" 
+                  defaultValue="wrongPassword1234$" 
+                  label="Please enter your password" 
+                  hasError 
+                  labelIsHidden 
+                />
                 <br />
                 <Link>Forgot your password?</Link>
               </fieldset>
@@ -113,7 +140,13 @@ export const Marquee = (props) => {
             { isForgot && 
             <div className="marquee__form">
               <fieldset>
-                <Input type="email" placeholder="Email address" label="Please enter your email address" labelIsHidden />
+                <Input 
+                  id="email54698"
+                  type="email" 
+                  placeholder="Email address" 
+                  label="Please enter your email address" 
+                  labelIsHidden 
+                />
               </fieldset>
               <Button variant={btn1style} onClick={sendVerification}>Send verification code</Button>
             </div>
@@ -122,7 +155,13 @@ export const Marquee = (props) => {
             { isVerification && 
             <div className="marquee__form">
               <fieldset>
-                <Input type="email" placeholder="Verification code" label="Please enter your verification code" labelIsHidden />
+                <Input 
+                  id="vcode"
+                  type="email" 
+                  placeholder="Verification code" 
+                  label="Please enter your verification code" 
+                  labelIsHidden 
+                />
               </fieldset>
               <Button variant={btn1style} onClick={verify}>Verify</Button>
             </div>
@@ -131,8 +170,20 @@ export const Marquee = (props) => {
             { isChangePassword && 
             <div className="marquee__form">
               <fieldset className="rhythm">
-                <Input type="password" placeholder="New password" label="Please enter your new desired password" labelIsHidden />
-                <Input type="password" placeholder="Confirm new password" label="Verify new password" labelIsHidden />
+                <Input 
+                  id="newPassword"
+                  type="password" 
+                  placeholder="New password" 
+                  label="Please enter your new desired password" 
+                  labelIsHidden 
+                />
+                <Input 
+                  id="newPasswordConfirm"
+                  type="password" 
+                  placeholder="Confirm new password" 
+                  label="Verify new password" 
+                  labelIsHidden 
+                />
               </fieldset>
               <Button variant={btn1style} onClick={verify}>Verify</Button>
             </div>

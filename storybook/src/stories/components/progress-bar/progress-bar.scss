@@ -1,0 +1,21 @@
+.progress-bar {
+  background-color: rgba(110, 158, 117, 0.1);
+  border-radius: .25rem;
+  margin: $spacing-lg 0;
+
+  &__indicator {
+    background-color: $colorGreen;
+    border-radius: .25rem;
+    color: $colorWhite;
+    display: block;
+    font-size: .75rem;
+    font-weight: $fontBold;
+    overflow: visible;
+    padding: .25rem $spacing;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    transition: $trans-all;
+    transition-delay: .2s;
+    white-space: nowrap;
+    width: 0%;
+  }
+}
