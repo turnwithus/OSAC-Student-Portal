@@ -1,14 +1,21 @@
 .input-radio {
-  align-items: center;
-  display: flex;
+  align-items: start;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
 
-  .input {
-    order: 0;
+  .input[type="radio"] {
+    justify-self: left;
+    grid-column: 1;
+    grid-row: 1;
     width: auto;
+    
+    & + div {
+      grid-column: 2;
+      grid-row: 2;
+    }
   }
 
   .label {
-    margin: 0 0 0 1ch;
-    order: 1;
+    grid-column: 2/span 11;
   }
 }

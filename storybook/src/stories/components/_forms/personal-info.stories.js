@@ -147,6 +147,64 @@ export const PersonalInfo = () => {
           <InputRadio id="uscitizen5678" name="uscitizen" value="yes" label="Yes" isChecked />
           <InputRadio id="uscitizen5679" name="uscitizen" value="no" label="No" />
         </Fieldset>
+        <Fieldset
+          labelText="Ethnic Identity"
+          subLabelText="I identify my ethnicity as (please select the description below that best corresponds to the race or ethnic group(s) with which you identify):"
+          infoText="Note*: Filling this can give you eligibility to more grants/scholarships."
+          variant="1col"
+        >
+
+          <InputRadio id="ethnic01" name="ethnicid" value="1" label="Alaskan Native / American Indian / Indigenous American / Native American" />
+          <InputRadio id="ethnic02" name="ethnicid" value="1" label="Black/of African descent" />
+          <InputRadio id="ethnic03" name="ethnicid" value="1" label="East Asian (inclusive of Chinese, Japanese, Japanese, Korean, Mongolian, Tibetan, and Taiwanese)" />
+          <InputRadio id="ethnic04" name="ethnicid" value="1" label="Latino AX/Hispanic" />
+          <InputRadio id="ethnic05" name="ethnicid" value="1" label="Middle Eastern" />
+          <InputRadio id="ethnic06" name="ethnicid" value="1" label="Pacific Islander" />
+          <InputRadio id="ethnic07" name="ethnicid" value="1" label="South Asian (inclusive of Bangladeshi, Bhutanese, Indian, Pakistani, and Sri Lankan)" />
+          <InputRadio id="ethnic08" name="ethnicid" value="1" label="Southeast Asian (inclusive of Burmese, Cambodian, Filipino, Hmong, Indonesian, Laotian, Malaysian, Mien, Singaporean, Thai, and Vietnamese)" />
+          <InputRadio id="ethnic09" name="ethnicid" value="1" label="White/Caucasian" />
+          <InputRadio id="ethnic10" name="ethnicid" value="1" label="My ethnic identity is not listed" isChecked>
+            <Input id="ethnic11" name="ethnicid" defaultValue="other" labelIsHidden />
+          </InputRadio>
+        </Fieldset>
+
+        <Fieldset
+          labelText="Enrolled Tribe"
+          subLabelText="Please select if you identify as an Enrolled Tribe."
+          isRequired
+        >
+          <Select id="pi-enrolled-tribe" labelIsHidden isRequired>
+            <option value="001">Option 1</option>
+            <option value="002">Option 2</option>
+            <option value="003">Option 3</option>
+            <option value="004">Option 4</option>
+          </Select>
+        </Fieldset>
+
+        <Fieldset>
+          <Select id="pi-gi" label="Gender Identity" isRequired>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="trans-female-woman">Trans Female/Woman</option>
+            <option value="trans-male-man">Trans Male/Man</option>
+            <option value="Non-binary/Genderqueer/Gender Non-conforming">Non-binary/Genderqueer/Gender Non-conforming</option>
+            <option value="Different identity">Different Identity</option>
+            <option value="Choose Not to Say">Choose Not to Say</option>
+          </Select>
+        </Fieldset>
+
+        <Fieldset 
+          labelText="Pronouns"
+          subLabelText="I identify as:"
+        >
+          <Select id="pi-pronouns" labelIsHidden isRequired>
+            <option value="she/her/hers">She/Her/Hers</option>
+            <option value="he/him/his">He/Him/His</option>
+            <option value="They/Them/Their">They/Them/Their</option>
+            <option value="Other pronouns">Other pronouns</option>
+          </Select>
+        </Fieldset>
+
         <Button onClick={SaveForm}>Update</Button>
         <ProgressBar />
       </Form>

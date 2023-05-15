@@ -35,6 +35,7 @@ export const InputRadio = (props) => {
         onChange={() => setChecked(!checked)} 
         {...rest}
       />
+      {children}
     </div>
   );
 };

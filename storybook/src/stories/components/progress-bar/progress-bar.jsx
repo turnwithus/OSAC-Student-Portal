@@ -16,8 +16,6 @@ export const ProgressBar = (props) => {
     { [`${className}`]: className }
   );
 
-  console.log(progress);
-
   return (
     <div className={classes} {...rest}>
       <i className="progress-bar__indicator" style={{width: progress +'%'}}>{progress}% Completed</i>
@@ -27,7 +25,7 @@ export const ProgressBar = (props) => {
 
 ProgressBar.defaultProps = {
   variant: 'default',
-  progress: '34'
+  progress: 34
 };
 
 ProgressBar.propTypes = {
