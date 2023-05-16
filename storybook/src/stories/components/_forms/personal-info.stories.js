@@ -205,6 +205,17 @@ export const PersonalInfo = () => {
           </Select>
         </Fieldset>
 
+        <Fieldset
+          labelText="Military identity"
+          subLabelText="I identify for the following:"
+          infoText="Note*: Filling this in can give you eligibility to more grants/scholarships."
+        >
+          <InputRadio id="military1" name="military1" value="" label="Joining the Army/Navy Academy" />
+          <InputRadio id="military2" name="military1" value="" label="Entering the Military/Navy" />
+          <InputRadio id="military3" name="military1" value="" label="Active Duty" />
+          <InputRadio id="military4" name="military1" value="" label="Veteran" />
+        </Fieldset>
+
         <Button onClick={SaveForm}>Update</Button>
         <ProgressBar />
       </Form>

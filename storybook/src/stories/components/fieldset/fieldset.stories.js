@@ -46,7 +46,7 @@ export const OneColumnComposed = () => {
       subLabelText="Optional sub-label text"
       infoText="Optional info text"
       variant="1col">
-        <InputRadio id="radio4532" label="yes" />
+        <InputRadio id="radio4582" label="yes" />
         <InputRadio id="radio4532" label="no" />
     </Fieldset>
   );

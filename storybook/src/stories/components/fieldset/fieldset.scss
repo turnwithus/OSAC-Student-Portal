@@ -1,6 +1,6 @@
 .fieldset {
   display: grid;
-  grid-gap: .25rem $spacing-sm;
+  grid-gap: $spacing-sm;
   margin: 0 0 $spacing-lg 0;
 
   .form--2col &:not(.fieldset--1col) {
@@ -19,7 +19,8 @@
     }
   }
 
-  &--1col {
+  &--1col,
+  &:has(.input-radio) {
     grid-gap: $spacing-xs;
 
     @include mq-md {
@@ -52,4 +53,5 @@
     margin: .5rem 0;
     padding: $spacing-xs;
   }
+  
 }
