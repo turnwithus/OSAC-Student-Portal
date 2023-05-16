@@ -10,6 +10,7 @@ export const Fieldset = (props) => {
     labelText,
     subLabelText,
     infoText,
+    isRequired,
     ...rest
   } = props;
 
@@ -22,7 +23,7 @@ export const Fieldset = (props) => {
   return (
     <fieldset className={classes} {...rest}>
       { labelText && 
-        <p className="fieldset__label">{labelText}</p>
+        <p className="fieldset__label">{labelText}{isRequired && <i className="required">*</i>}</p>
       }
       { subLabelText && 
         <p className="fieldset__sublabel">{subLabelText}</p>

@@ -16,7 +16,7 @@ export default {
 export const PersonalInfo = () => {
   const SaveForm = (event) => {
     event.preventDefault();
-    console.log('Saving your updates.');
+    alert('Saving your updates.');
   }
 
   return  (
@@ -109,7 +109,7 @@ export const PersonalInfo = () => {
             <option value="ND">North Dakota</option>
             <option value="OH">Ohio</option>
             <option value="OK">Oklahoma</option>
-            <option value="OR" selected>Oregon</option>
+            <option value="OR" defaultValue>Oregon</option>
             <option value="PA">Pennsylvania</option>
             <option value="RI">Rhode Island</option>
             <option value="SC">South Carolina</option>
@@ -214,6 +214,61 @@ export const PersonalInfo = () => {
           <InputRadio id="military2" name="military1" value="" label="Entering the Military/Navy" />
           <InputRadio id="military3" name="military1" value="" label="Active Duty" />
           <InputRadio id="military4" name="military1" value="" label="Veteran" />
+        </Fieldset>
+
+        <Fieldset
+          labelText="Select all that apply"
+          infoText="Note*: Filling this may give you eligibility to the following: [Name], [Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships."
+          variant="1col"
+          isRequired
+        >
+          <InputCheckbox 
+            id="checkboxDeps"
+            label="Have Dependent Children" />
+          <InputCheckbox 
+            id="checkboxNatlGuard"
+            label="Currently Serving in the Oregon National Guard" />
+          <InputCheckbox 
+            id="checkboxFosterCare"
+            label="Currently or Formerly living in Foster Care or Participating in an Independent Living Program" />
+          <InputCheckbox 
+            id="checkboxNone1234"
+            label="None of the above" />
+        </Fieldset>
+
+        <Fieldset
+          labelText="Will your degree be related to working with or supporting work in the field of Early Learning and Care?"
+          infoText="Note*: [Name],[Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships require these."
+          isRequired
+        >
+          <InputRadio id="radioDegreeY" name="radioDegree1" value="" label="Yes" />
+          <InputRadio id="radioDegreeN" name="radioDegree1" value="" label="No" />
+        </Fieldset>
+
+        <Fieldset
+          labelText="Are you the dependent of a public safety officer in the state of Oregon who was killed or disabled in the line of duty?"
+          infoText="Note*: [Name],[Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships require these."
+          isRequired
+        >
+          <InputRadio id="radioPSdepY" name="radioDegree1" value="" label="Yes" />
+          <InputRadio id="radioPSdepN" name="radioDegree1" value="" label="No" />
+        </Fieldset>
+
+        <Fieldset
+          labelText="Applicant type"
+          infoText="Note*: [Name],[Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships require these."
+          isRequired
+        >
+          <InputRadio id="radioAppType321" name="radioAppType1" value="" label="Test Applicant (HS junior or below, counselor, educator, parent, volunteer)" />
+          <InputRadio id="radioAppType123" name="radioAppType1" value="" label="Student Applicant" />
+        </Fieldset>
+
+        <Fieldset
+          labelText="Will you be an Oregon resident for 12 months prior to college enrollment?"
+          isRequired
+        >
+          <InputRadio id="radioOregonRes321" name="radioORres1" value="" label="Yes" />
+          <InputRadio id="radioOregonRes123" name="radioORres1" value="" label="No" />
         </Fieldset>
 
         <Button onClick={SaveForm}>Update</Button>

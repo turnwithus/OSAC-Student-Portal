@@ -39,7 +39,10 @@ svg {
   vertical-align: bottom;
 }
 
-p {
+p,
+label,
+span,
+i {
   max-width: 90ch;
 }
 

@@ -10,6 +10,7 @@ export const Select = (props) => {
     label,
     id,
     labelIsHidden,
+    isRequired,
     ...rest
   } = props;
 
@@ -21,7 +22,7 @@ export const Select = (props) => {
 
   return (
     <div>
-      <label htmlFor={id} className={labelIsHidden ? 'label sr-only' : 'label'}>{label}</label>
+      <label htmlFor={id} className={labelIsHidden ? 'label sr-only' : 'label'}>{label}{isRequired && <i className="required">&</i>}</label>
       <select tabIndex="-1" id={id} className={classes} {...rest}>
         {children}
       </select>
