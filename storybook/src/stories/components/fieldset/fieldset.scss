@@ -19,8 +19,11 @@
     }
   }
 
+  /* one column layouts -- automatically applied to a fieldset containing checkboxes or radio controls */
+  /* must be explicitly declared for FireFox: https://caniuse.com/css-has */ 
   &--1col,
-  &:has(.input-radio) {
+  &:has(.input-radio),
+  &:has(.input-checkbox) {
     grid-gap: $spacing-xs;
 
     @include mq-md {
@@ -34,12 +37,12 @@
 
   &__label {
     @extend .label;
-    grid-column: 1/span 12;
+    grid-column: 1/span 2;
   }
 
   &__sublabel,
   &__infotext {
-    grid-column: 1/span 12;
+    grid-column: 1/span 2;
     font-size: .75rem;
   }
 
@@ -51,7 +54,7 @@
     background-color: rgba(26, 71, 110, 0.1);
     display: inline-block;
     margin: .5rem 0;
+    max-width: unset;
     padding: $spacing-xs;
   }
-  
 }

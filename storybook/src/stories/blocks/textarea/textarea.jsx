@@ -1,45 +1,45 @@
-import React, { useId } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const Select = (props) => {
+export const Textarea = (props) => {
   const {
     variant,
     className,
     children,
-    label,
     id,
+    label,
     labelIsHidden,
     isRequired,
+    placeholder,
     ...rest
   } = props;
 
   const classes = classNames(
-    'select input',
-    { [`select--${variant}`]: variant },
+    'input textarea',
+    { [`textarea--${variant}`]: variant },
     { [`${className}`]: className }
   );
 
   return (
     <div>
       <label htmlFor={id} className={labelIsHidden ? 'label sr-only' : 'label'}>{label}{isRequired && <i className="required">*</i>}</label>
-      <select tabIndex="-1" id={id} className={classes} {...rest}>
+      <textarea tabIndex="-1" id={id} className={classes} {...rest} placeholder={placeholder}>
         {children}
-      </select>
+      </textarea>
     </div>
   );
 };
 
-Select.defaultProps = {
+Textarea.defaultProps = {
+  label: 'Textarea label:',
   variant: 'default',
-  label: 'Select one of the following: ',
-  id: { useId }
+  id: 'textarea-1',
+  placeholder: 'Start typing here...'
 };
 
-Select.propTypes = {
+Textarea.propTypes = {
   variant: PropTypes.oneOf(['default']),
-  label: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-  id: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

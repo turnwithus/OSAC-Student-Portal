@@ -1,14 +1,16 @@
 .input-checkbox {
-  align-items: center;
+  align-items: start;
   display: flex;
 
   .input {
+    display: block;
+    margin-top: 4px;
     order: 0;
     width: auto;
   }
 
   .label {
-    margin: 0 0 0 1ch;
+    margin: 0 0 0 .75ch;
     order: 1;
   }
 }

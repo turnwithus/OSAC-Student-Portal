@@ -5,5 +5,7 @@
 
 .required {
   color: $colorRed;
+  display: inline-block;
   font-weight: $fontNormal;
+  padding-left: .5ch;
 }

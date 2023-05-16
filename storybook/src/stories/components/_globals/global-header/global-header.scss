@@ -77,6 +77,7 @@
 
   &__toggle {
     grid-column: 12;
+    justify-self: end;
     position: relative;
     z-index: 201;
 

@@ -30,7 +30,7 @@ Brand.defaultProps = {
 };
 
 Brand.propTypes = {
-  variant: PropTypes.oneOf(['default', 'hecc']),
+  variant: PropTypes.oneOf(['default', 'hecc', 'hecc-color', 'osa']),
   className: PropTypes.string,
   label: PropTypes.string,
 };

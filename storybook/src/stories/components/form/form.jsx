@@ -26,7 +26,7 @@ export const Form = (props) => {
 };
 
 Form.defaultProps = {
-  variant: 'default',
+  variant: '2col',
 };
 
 Form.propTypes = {

@@ -25,7 +25,7 @@ export const PersonalInfo = () => {
       label="Personal Information"
       isRequired
     >
-      <Form variant="2col">
+      <Form>
         <Fieldset>
           <Input 
             id="inputPwd324"
@@ -109,7 +109,7 @@ export const PersonalInfo = () => {
             <option value="ND">North Dakota</option>
             <option value="OH">Ohio</option>
             <option value="OK">Oklahoma</option>
-            <option value="OR" defaultValue>Oregon</option>
+            <option value="OR" selected>Oregon</option>
             <option value="PA">Pennsylvania</option>
             <option value="RI">Rhode Island</option>
             <option value="SC">South Carolina</option>

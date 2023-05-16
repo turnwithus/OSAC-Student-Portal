@@ -21,29 +21,28 @@ export const BasicInfo = () => {
       label="Basic Information"
       isRequired
     >
-      <Form variant="2col">
+      <Form>
         <Fieldset>
           <Input 
             id="PI-LFN" 
             label="Legal First Name" 
-            defaultValue=""
+            defaultValue="Ronnie"
             isRequired 
           />
           <Input 
             id="PI-LMN" 
             label="Legal Middle Name" 
-            defaultValue="" 
+            defaultValue="James" 
           />
           <Input 
             id="PI-LLN" 
             label="Legal Last Name" 
-            defaultValue="" 
+            defaultValue="Dio" 
             isRequired 
           />
           <Input 
             id="PI-LLN2" 
-            label="Confirm Legal Last Name" 
-            defaultValue="Dio" 
+            label="Confirm Legal Last Name"
             isRequired
           />
         </Fieldset>
@@ -51,7 +50,7 @@ export const BasicInfo = () => {
           <Input id="PI-birth" type="date" label="Birthdate" defaultValue="1996-07-22" isRequired />
         </Fieldset>
         <Button onClick={SaveForm}>Save</Button>
-        <ProgressBar progress={40} />
+        <ProgressBar progress={60} />
       </Form>
 
     </Accordion>
