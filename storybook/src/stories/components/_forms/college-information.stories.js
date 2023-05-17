@@ -23,6 +23,11 @@ export const CollegeInformation = () => {
     console.log('Add previous college experience function...')
   }
 
+  const HandleSubFormAdd = (event) => {
+    event.preventDefault();
+    console.log('Subform add function')
+  }
+
   const HandleFileClick = (event) => {
     console.log('Event for file upload')
   }
@@ -51,7 +56,7 @@ export const CollegeInformation = () => {
         />
 
         <Fieldset variant="1col">
-          <SubForm>
+          <SubForm buttonText="Remove">
             <Fieldset variant="1col">
               <Select 
                 id="ciSelectCollege"
@@ -102,7 +107,7 @@ export const CollegeInformation = () => {
             </Fieldset>
           </SubForm>
           <div>
-            <Button variant="green-outline">Add</Button>
+            <Button variant="green-outline" onClick={HandleSubFormAdd}>Add</Button>
           </div>
         </Fieldset>
 

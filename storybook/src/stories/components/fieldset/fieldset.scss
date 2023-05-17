@@ -2,10 +2,15 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: $spacing-sm;
-  margin: 0 0 $spacing-lg 0;
+  margin: 0 0 $spacing 0;
 
   @include mq-md {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  & + .fieldset {
+    border-top: 1px solid #eee;
+    padding-top: $spacing;
   }
 
   .fieldset {
@@ -17,7 +22,7 @@
     }
   }
 
-  /* one column layouts */
+  /* one column layouts for things like radios/checkboxes */
   &--1col {
     grid-gap: $spacing-xs;
 
@@ -38,8 +43,9 @@
 
   &__sublabel,
   &__infotext {
-    grid-column: 1/span 2;
     font-size: .75rem;
+    grid-column: 1/span 2;
+    justify-self: start;
     max-width: unset;
   }
 
