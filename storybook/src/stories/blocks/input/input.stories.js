@@ -65,3 +65,23 @@ export const DateTime = () => {
     />
   );
 };
+
+export const Search = () => {
+  return  (
+    <Input 
+      type="search" 
+      label="Search..." 
+      placeholder="Search for a grant or scholarship name"
+    />
+  );
+};
+
+export const File = () => {
+  return  (
+    <Input 
+      id="inputFile1254"
+      type="file"
+      label="Upload file(s)"
+    />
+  );
+};

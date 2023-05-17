@@ -86,4 +86,9 @@
     margin-top: unset;
     padding: 0;
   }
+
+  &--black {
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
 }

@@ -1,0 +1,9 @@
+.sub-form {
+  background-color: $colorGray;
+  border-radius: .5rem;
+  padding: $spacing;
+
+  .fieldset:last-of-type {
+    margin-bottom: $spacing-sm;
+  }
+}

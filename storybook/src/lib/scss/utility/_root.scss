@@ -48,3 +48,7 @@ i {
 ::selection {
   background-color: rgba(110, 158, 117, 0.1);
 }
+
+[aria-hidden="true"] * {
+  display: none;
+}

@@ -3,27 +3,21 @@
   grid-gap: $spacing-sm;
   margin: 0 0 $spacing-lg 0;
 
-  .form--2col &:not(.fieldset--1col) {
+  @include mq-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fieldset {
+    padding: $spacing-sm 0;
+    margin: 0;
+
     @include mq-md {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .fieldset {
-      padding: $spacing-sm 0;
-      margin: 0;
-
-      @include mq-md {
-        grid-gap: $spacing-xs;
-        grid-template-columns: 1fr;
-      }
+      grid-gap: $spacing-xs;
     }
   }
 
-  /* one column layouts -- automatically applied to a fieldset containing checkboxes or radio controls */
-  /* must be explicitly declared for FireFox: https://caniuse.com/css-has */ 
-  &--1col,
-  &:has(.input-radio),
-  &:has(.input-checkbox) {
+  /* one column layouts */
+  &--1col {
     grid-gap: $spacing-xs;
 
     @include mq-md {

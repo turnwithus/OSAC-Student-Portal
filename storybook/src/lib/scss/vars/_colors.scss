@@ -1,14 +1,15 @@
 /* Brand colors */
-$colorNavy: #1A476E;
-$colorTeal: #33797E;
-$colorGreen: darken(#6E9E75, 11%); /* A11y contrast compliance requires higher contrast */
-$colorRed: #F03738;
+$colorNavy: #1A476e;
+$colorTeal: #33797e;
+$colorGreen: darken(#6e9e75, 11%); /* A11y contrast compliance requires higher contrast */
+$colorRed: #f03738;
 
 /* Neutrals */
-$colorBlack: #292C30;
-$colorGray-1: #CFCFCF;
+$colorBlack: #292c30;
+$colorGray: #eeeeee;
+$colorGray-1: #cfcfcf;
 $colorGray-2: rgba(26, 71, 110, 0.1);
-$colorGray-3: #6F6F6F;
+$colorGray-3: #6f6f6f;
 $colorWhite: #ffffff;
 
 $bgAlert: rgba(26, 71, 110, 0.1);
