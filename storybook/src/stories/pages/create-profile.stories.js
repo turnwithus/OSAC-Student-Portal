@@ -2,7 +2,7 @@ import { Pageshell } from '../layouts/pageshell/pageshell';
 import { Marquee } from '../components/marquee/marquee';
 
 import { BasicInfo } from '../components/_forms/basic-info.stories';
-import { FafsaOrsaa } from '../components/_forms/fafsa-orsaa.stories';
+import { FafsaOrsaaFiling } from '../components/_forms/fafsa-orsaa-filing.stories';
 import { FamilyInfo } from '../components/_forms/family-info.stories';
 import { PersonalInfo } from '../components/_forms/personal-info.stories';
 import { WorkStatus } from '../components/_forms/work-status.stories';
@@ -25,7 +25,7 @@ export const CreateProfile = () => {
       <BasicInfo />
       <PersonalInfo />
       <FamilyInfo />
-      <FafsaOrsaa />
+      <FafsaOrsaaFiling />
       <WorkStatus />
 
     </Pageshell>

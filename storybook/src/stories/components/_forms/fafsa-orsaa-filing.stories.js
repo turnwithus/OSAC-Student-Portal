@@ -9,7 +9,7 @@ export default {
   title: 'Forms/Fafsa Orsaa',
 };
 
-export const FafsaOrsaa = () => {
+export const FafsaOrsaaFiling = () => {
   const SaveForm = (event) => {
     event.preventDefault();
     console.log('Saving your updates.');
