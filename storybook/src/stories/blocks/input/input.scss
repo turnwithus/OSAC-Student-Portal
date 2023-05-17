@@ -17,9 +17,10 @@
   }
 
   &[type="file"] {
-    display: none;
-
-    & + .label {
+    border: 0;
+    padding: .5rem 0;
+    
+    &::file-selector-button {
       @extend .button;
       @extend .button--green-outline;
     }

@@ -28,14 +28,12 @@ export const Input = (props) => {
 
   return (
     <div>
-      {props.type !='file' && 
       <label 
         htmlFor={id} 
         className={labelIsHidden ? 'label sr-only' : 'label'}
       >
         {label} {isRequired && <i className="required">*</i>}
       </label>
-      }
       <input 
         id={id} 
         type={type} 
@@ -45,14 +43,6 @@ export const Input = (props) => {
         {...isRequired && {required: true}} 
         {...rest} 
       />
-      {props.type =='file' && 
-      <label 
-        htmlFor={id} 
-        className={labelIsHidden ? 'label sr-only' : 'label'}
-      >
-        {label} {isRequired && <i className="required">*</i>}
-      </label>
-      }
       {children}
     </div>
   );

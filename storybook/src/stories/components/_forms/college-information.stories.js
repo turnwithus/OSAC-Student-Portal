@@ -24,7 +24,6 @@ export const CollegeInformation = () => {
   }
 
   const HandleFileClick = (event) => {
-    event.preventDefault();
     console.log('Event for file upload')
   }
 
@@ -32,7 +31,6 @@ export const CollegeInformation = () => {
     <Accordion
       id="collegeInfo78458"
       label="College Information"
-      isOpen
     >
       <Form variant="2col">
         <Fieldset
