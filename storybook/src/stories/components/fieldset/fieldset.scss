@@ -9,7 +9,6 @@
   }
 
   & + .fieldset {
-    border-top: 1px solid #eee;
     padding-top: $spacing;
   }
 
@@ -30,8 +29,8 @@
       grid-template-columns: 1fr;
     }
 
-    > div {
-      grid-column: 1/span 12;
+    .fieldset {
+      grid-column: 1;
     }
   }
 
