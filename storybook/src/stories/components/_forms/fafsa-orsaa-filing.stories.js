@@ -6,7 +6,7 @@ import { InputRadio } from '../../blocks/input-radio/input-radio';
 import { ProgressBar } from '../progress-bar/progress-bar';
 
 export default {
-  title: 'Forms/Fafsa Orsaa',
+  title: 'Forms/Fafsa Orsaa Filing',
 };
 
 export const FafsaOrsaaFiling = () => {
