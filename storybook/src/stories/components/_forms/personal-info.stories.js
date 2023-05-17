@@ -206,6 +206,7 @@ export const PersonalInfo = () => {
         </Fieldset>
 
         <Fieldset
+          variant="1col"
           labelText="Military identity"
           subLabelText="I identify for the following:"
           infoText="Note*: Filling this in can give you eligibility to more grants/scholarships."
@@ -237,6 +238,7 @@ export const PersonalInfo = () => {
         </Fieldset>
 
         <Fieldset
+          variant="1col"
           labelText="Will your degree be related to working with or supporting work in the field of Early Learning and Care?"
           infoText="Note*: [Name],[Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships require these."
           isRequired
@@ -246,6 +248,7 @@ export const PersonalInfo = () => {
         </Fieldset>
 
         <Fieldset
+        variant="1col"
           labelText="Are you the dependent of a public safety officer in the state of Oregon who was killed or disabled in the line of duty?"
           infoText="Note*: [Name],[Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships require these."
           isRequired
@@ -255,6 +258,7 @@ export const PersonalInfo = () => {
         </Fieldset>
 
         <Fieldset
+          variant="1col"
           labelText="Applicant type"
           infoText="Note*: [Name],[Name] & [Name] Grants and [Name], [Name] & [Name] Scholarships require these."
           isRequired
@@ -264,6 +268,7 @@ export const PersonalInfo = () => {
         </Fieldset>
 
         <Fieldset
+          variant="1col"
           labelText="Will you be an Oregon resident for 12 months prior to college enrollment?"
           isRequired
         >

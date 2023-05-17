@@ -13,7 +13,7 @@
     color: $colorWhite;
     cursor: pointer;
     display: block;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     padding: $spacing-sm $spacing;
     position: relative;
     text-align: left;
@@ -28,9 +28,13 @@
       height: 1rem;
       position: absolute;
       right: $spacing;
-      top: 1.25rem;
+      top: 1rem;
       transition: $trans-all-quick;
       width: 2px;
+
+      @include mq-md {
+        top: 1.25rem;
+      }
     }
 
     &::before {

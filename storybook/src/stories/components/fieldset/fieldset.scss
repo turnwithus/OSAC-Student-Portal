@@ -1,5 +1,6 @@
 .fieldset {
   display: grid;
+  grid-template-columns: 1fr;
   grid-gap: $spacing-sm;
   margin: 0 0 $spacing-lg 0;
 
@@ -32,12 +33,14 @@
   &__label {
     @extend .label;
     grid-column: 1/span 2;
+    max-width: unset;
   }
 
   &__sublabel,
   &__infotext {
     grid-column: 1/span 2;
     font-size: .75rem;
+    max-width: unset;
   }
 
   &__sublabel {
@@ -48,7 +51,6 @@
     background-color: rgba(26, 71, 110, 0.1);
     display: inline-block;
     margin: .5rem 0;
-    max-width: unset;
     padding: $spacing-xs;
   }
 }

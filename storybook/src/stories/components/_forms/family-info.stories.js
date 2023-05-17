@@ -121,7 +121,7 @@ export const FamilyInfo = () => {
           </Select>
         </Fieldset>
 
-        <Fieldset>
+        <Fieldset variant="1col">
           <InputCheckbox
             value="textAboutUpdates"
             id="checkBoxTextUpdates"

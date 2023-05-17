@@ -22,8 +22,9 @@ export const FafsaOrsaaFiling = () => {
     >
       <Form>
         <Fieldset
+          variant="1col"
           labelText="FAFSA/ORSAA"
-          subLabelText="Have you file for FAFSA/PRSAA for 2023-2-24?"
+          subLabelText="Have you filed for FAFSA/PRSAA for 2023-2-24?"
           infoText="Note*: If you do not file for FAFSA/ORSAA, knw that you will not be considered for any grants or scholarships that requires them."
         >
           <InputRadio
@@ -40,7 +41,8 @@ export const FafsaOrsaaFiling = () => {
             id="radioFAFSAlater"
             name="filedFAFSAORSAA"
             label="I will file for FAFSA/ORSAA later"
-            value="later" />
+            value="later" 
+            isChecked />
         </Fieldset>
         <ProgressBar progress={60} />
         <Button onClick={SaveForm}>Save</Button>
