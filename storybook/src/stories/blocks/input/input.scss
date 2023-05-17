@@ -23,6 +23,7 @@
     &::file-selector-button {
       @extend .button;
       @extend .button--green-outline;
+      margin-top: 0;
     }
   }
 }
