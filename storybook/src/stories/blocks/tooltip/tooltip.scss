@@ -1,0 +1,37 @@
+.tooltip {
+  background-color: transparent;
+  background-image: url(../../assets/icon-tooltip-trigger.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  height: .875rem;
+  overflow: visible;
+  position: relative;
+  width: .875rem;
+
+  & > span {
+    background-color: $colorBlack;
+    border-radius: .25rem;
+    bottom: 100%;
+    color: $colorWhite;
+    display: block;
+    font-size: .75rem;
+    left: 50%;
+    max-width: 80vw;
+    min-width: 8rem;
+    opacity: 0;
+    padding: $spacing-xs;
+    pointer-events: none;
+    position: absolute;
+    transition: $trans-all-quick;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    & > span {
+      opacity: 1;
+      pointer-events: all;
+    } 
+  }
+}

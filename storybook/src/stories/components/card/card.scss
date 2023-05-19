@@ -1,0 +1,46 @@
+.card {
+  border: 1px solid $colorGray;
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  font-size: .75rem;
+  max-width: 16.625rem;
+  padding: $spacing;
+  position: relative;
+  text-align: center;
+
+  &__title,
+  &__id,
+  &__status-text {
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  &__id {
+    font-size: .75rem;
+    font-style: normal;
+    font-weight: $fontBold;
+    padding: $spacing-sm 0;
+  }
+
+  &__status {
+    @extend .rhythm;
+    color: $colorNavy;
+    font-size: .75rem;
+    padding-top: $spacing;
+
+    .button {
+      margin: $spacing-xs 0;
+    }
+  }
+
+  .tooltip {
+    position: absolute;
+    right: $spacing-xs;
+    top: $spacing-xs;
+  }
+}
