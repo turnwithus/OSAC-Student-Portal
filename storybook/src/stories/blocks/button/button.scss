@@ -5,9 +5,9 @@
   color: $colorWhite;
   cursor: pointer;
   display: inline-block;
-  font-size: .75rem;
+  font-size: .875rem;
   margin: $spacing $spacing 0 0;
-  padding: .5em .75em;
+  padding: .75em 1.5em;
   transition: $trans-all-quick;
 
   @include mq-md {

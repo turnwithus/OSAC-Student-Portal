@@ -8,6 +8,7 @@
   overflow: visible;
   position: relative;
   width: .875rem;
+  z-index: $z-index-tooltip;
 
   & > span {
     background-color: $colorBlack;

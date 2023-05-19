@@ -3,6 +3,7 @@
 @import './lib/scss/vars/measurements';
 @import './lib/scss/vars/transitions';
 @import './lib/scss/vars/type';
+@import './lib/scss/vars/z-index';
 
 /* Lib */
 @import './lib/scss/utility/a11y';
@@ -39,6 +40,7 @@
 @import './stories/components/sub-form/sub-form';
 
 /* Layouts */
+@import './stories/layouts/card-deck/card-deck';
 @import './stories/layouts/component/component';
 @import './stories/layouts/grid/grid';
 @import './stories/layouts/wrapper/wrapper';

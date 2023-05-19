@@ -43,18 +43,22 @@ export const Card = (props) => {
           <em className="card__id">{id}</em>
         }
         </p>
-        {children}
+        { children && 
+          <div className="card__copy">
+            {children}
+          </div>
+        }
       </div>
       <div className="card__status">
         
-        {props.status == 'submitted' && 
+        {props.status === 'submitted' && 
         <>
         <i className="card__status-text">{status}</i>
         <Button onClick={handleButtonClick}>Check Status</Button>
         </>
         }
         
-        {props.status == 'renewable' && 
+        {props.status === 'renewable' && 
         <>
         <i className="card__status-text">{status}</i>
         <Button onClick={handleButtonClick}>Check Status</Button>
@@ -62,14 +66,14 @@ export const Card = (props) => {
         </>
         }
         
-        {props.status == 'eligible' && 
+        {props.status === 'eligible' && 
         <>
         <i className="card__status-text">{status}</i>
         <Button onClick={handleButtonClick}>Apply</Button>
         </>
         }
         
-        {props.status == 'awarded' && 
+        {props.status === 'awarded' && 
         <>
         <i className="card__status-text">{status}</i>
           {props.hasChoice && 
@@ -81,7 +85,7 @@ export const Card = (props) => {
         </>
         }
         
-        {props.status == 'ineligible' && 
+        {props.status === 'ineligible' && 
         <>
         <i className="card__status-text">{status}</i>
         <Button onClick={handleButtonClick}>See Details</Button>

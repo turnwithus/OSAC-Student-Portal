@@ -50,7 +50,7 @@
     text-align: center;
     top: $headerHeightSm;
     transition: $trans-all;
-    z-index: 200;
+    z-index: $z-index-header;
 
     @include mq-xs {
       padding-top: $headerHeightSm;

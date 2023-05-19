@@ -1,6 +1,7 @@
 import { Marquee } from './marquee';
 
 import { Alert } from '../../components/alert/alert';
+import { Button } from '../../blocks/button/button';
 
 export default {
   title: 'Components/Marquee',
@@ -119,6 +120,21 @@ export const PromptingUpdates = () => {
         <strong>Recommended Updates</strong>
         <p>Please update within these sections: High School Information, College Information and College of Choice, Standing, & Plan</p>
       </Alert>
+    </Marquee>
+  );
+};
+
+export const Grant = () => {
+  return  (
+    <Marquee  
+      headingText="Grants"
+      subHeadingText="Please take a look at the grants available to all of our students.">
+      <p>
+        Tap on “Edit Profile” to if you want to make some changes within your profile.
+        <br />
+        Note*: Depending on the information you’ve changed, your eligibility to certain grants may change.
+      </p>
+      <Button variant="black">Edit Profile</Button>
     </Marquee>
   );
 };
