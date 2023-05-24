@@ -1,0 +1,64 @@
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+
+  &__tab-list {
+    border-bottom: 1px solid $colorBlack;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    margin: 0 0 $spacing-lg;
+    padding: 0;
+  }
+
+  &__tab {
+    cursor: pointer;
+    display: inline-block;
+    font-size: clamp(.75rem, 2.5vw, 1.125rem);
+    font-weight: $fontBold;
+    list-style: none;
+    padding: clamp(0rem, 2.5vw, $spacing-xs);
+    padding-bottom: clamp(.75rem, 2.5vw, 1.25rem);
+    position: relative;
+    text-align: center;
+
+    &:focus {
+      outline: 1px $colorGray;
+
+      &::after {
+        background-color: $colorGray-3;
+      }
+    }
+
+    &::after {
+      background-color: $colorGray-3;
+      content: '';
+      display: block;
+      height: 0;
+      position: absolute;
+      inset: auto 0 0 0;
+      transition: $trans-all-quick;
+    }
+
+    &--selected {
+      color: $colorBlack;
+
+      &::after {
+        height: clamp(.5rem, 2.5vw, .75rem);
+      }
+    }
+
+    &--disabled {
+      color: $colorGray;
+      cursor: default;
+    }
+  }
+
+  &__tab-panel {
+    display: block;
+    opacity: 0;
+
+    &--selected {
+      opacity: 1;
+    }
+  }
+}
