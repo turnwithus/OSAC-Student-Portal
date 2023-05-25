@@ -2,21 +2,16 @@
 
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/preset-create-react-app",
-    //"@storybook/addon-interactions",
-    "@storybook/addon-a11y",
-    '@storybook/addon-essentials',
-  ],
+  addons: ["@storybook/addon-links", "@storybook/preset-create-react-app",
+  //"@storybook/addon-interactions",
+  "@storybook/addon-a11y", '@storybook/addon-essentials', "@storybook/addon-mdx-gfm"],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {},
+    options: {}
   },
   docs: {
-    autodocs: "tag",
+    autodocs: "tag"
   },
-  staticDirs: ["../public"],
+  staticDirs: ["../public"]
 };
-
 export default config;

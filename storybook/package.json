@@ -53,21 +53,22 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^7.0.12",
-    "@storybook/addon-essentials": "^7.0.12",
-    "@storybook/addon-interactions": "^7.0.12",
-    "@storybook/addon-links": "^7.0.12",
+    "@storybook/addon-a11y": "^7.0.17",
+    "@storybook/addon-essentials": "^7.0.17",
+    "@storybook/addon-interactions": "^7.0.17",
+    "@storybook/addon-links": "^7.0.17",
+    "@storybook/addon-mdx-gfm": "^7.0.17",
     "@storybook/addon-styling": "^1.0.8",
-    "@storybook/blocks": "^7.0.12",
-    "@storybook/preset-create-react-app": "^7.0.12",
-    "@storybook/react": "^7.0.12",
-    "@storybook/react-webpack5": "^7.0.12",
+    "@storybook/blocks": "^7.0.17",
+    "@storybook/preset-create-react-app": "^7.0.17",
+    "@storybook/react": "^7.0.17",
+    "@storybook/react-webpack5": "^7.0.17",
     "@storybook/testing-library": "^0.1.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "plop": "^3.1.2",
     "prop-types": "^15.8.1",
     "sass": "^1.62.1",
-    "storybook": "^7.0.12",
+    "storybook": "^7.0.17",
     "webpack": "^5.80.0"
   }
 }
