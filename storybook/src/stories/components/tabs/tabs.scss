@@ -43,7 +43,11 @@
       color: $colorBlack;
 
       &::after {
-        height: clamp(.5rem, 2.5vw, .75rem);
+        height: .25rem;
+
+        @include mq-md {
+          height: .5rem;
+        }
       }
     }
 
