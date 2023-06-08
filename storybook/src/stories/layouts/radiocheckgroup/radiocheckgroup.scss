@@ -1,3 +1,6 @@
 .radiocheckgroup {
-  /* Radiocheckgroup */
+  &__layout {
+    display: flex;
+    gap: $spacing-lg;
+  }
 }

@@ -59,6 +59,12 @@ export const Black = () => {
   );
 };
 
+export const BlackOutline = () => {
+  return  (
+    <Button variant="black-outline">Black Outline</Button>
+  );
+};
+
 export const Plain = () => {
   return  (
     <Button variant="plain">Change email address</Button>

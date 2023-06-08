@@ -91,6 +91,12 @@
     color: $colorWhite;
   }
 
+  &--black-outline {
+    background-color: $colorWhite;
+    border-color: $colorBlack;
+    color: $colorBlack;
+  }
+
   &--close {
     background-color: transparent;
     border-radius: 0;

@@ -17,10 +17,11 @@ export const Radiocheckgroup = (props) => {
   );
 
   return (
-    <div className={classes} {...rest}>
-      radiocheckgroup
-      {children}
-    </div>
+    <fieldset className={classes} {...rest}>
+      <div className="radiocheckgroup__layout">
+        {children}
+      </div>
+    </fieldset>
   );
 };
 

@@ -13,6 +13,7 @@ export const Dialog = (props) => {
     id,
     isOpen,
     triggerText,
+    dialogTitle,
     ...rest
   } = props;
 
@@ -36,8 +37,13 @@ export const Dialog = (props) => {
     <>
       <Button onClick={openDialog}>{triggerText}</Button>
       <dialog className={classes} {...rest} open={dialogOpen}>
-        {children}
-        <Button variant="close" onClick={closeDialog}><span className="sr-only">{closeBtnText}</span></Button>
+        <div className="dialog__layout">
+          {dialogTitle && <div className="dialog__title"><strong>{dialogTitle}</strong></div>}
+          <div className="dialog__content rhythm">
+            {children}
+          </div>
+          <Button variant="close" onClick={closeDialog}><span className="sr-only">{closeBtnText}</span></Button>
+        </div>
       </dialog>
     </>
   );
@@ -58,4 +64,5 @@ Dialog.propTypes = {
   triggerText: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   isOpen: PropTypes.bool,
   id: PropTypes.string,
+  dialogTitle: PropTypes.string,
 };

@@ -1,10 +1,55 @@
 .dialog {
-  padding: $spacing-lg $spacing $spacing;
-  position: relative;
+  border: 0;
+  display: block;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: $z-index-dialog;
   
   .button--close {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: $spacing-sm;
+    top: $spacing-sm;
+  }
+
+  &__layout {
+    background-color: $colorWhite;
+    max-width: 71rem;
+    position: relative;
+  }
+
+  &__title {
+    @extend .heading--h2;
+    border-bottom: 1px solid $colorBlack;
+    padding: $spacing-sm $spacing-xl $spacing-sm $spacing;
+
+    & + .dialog__content {
+      padding: $spacing $spacing-xl $spacing $spacing;
+    }
+  }
+
+  &__content {
+    background-color: $colorWhite;
+    padding: $spacing $spacing-xl $spacing $spacing;
+  }
+
+  &::before {
+    background-color: $colorBlack;
+    content: '';
+    inset: 0 0 0 0;
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+  }
+
+  &[open] {
+    opacity: 1;
+    pointer-events: all;
+    transition: $trans-all-quick;
+
+    &::before {
+      opacity: .88;
+    }
   }
 }
