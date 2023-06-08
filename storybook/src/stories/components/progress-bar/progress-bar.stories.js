@@ -9,6 +9,6 @@ export const Default = () => {
   return  (
     <ProgressBar
       progress={56}
-    >Default ProgressBar</ProgressBar>
+    >Default Progress Bar</ProgressBar>
   );
 };

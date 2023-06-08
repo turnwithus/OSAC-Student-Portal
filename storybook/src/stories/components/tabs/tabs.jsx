@@ -102,8 +102,6 @@ export const Tabs = (props) => {
   </Wrapper>;
 };
 
-
-
 /* PROTYPE DEFINITIONS */
 Tabs.propTypes = {
   variant: PropTypes.oneOf(['default', 'vertical', 'vert']),

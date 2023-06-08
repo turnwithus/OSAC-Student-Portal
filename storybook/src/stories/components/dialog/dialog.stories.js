@@ -15,7 +15,7 @@ export const Default = () => {
 
 export const Open = () => {
   return  (
-    <Dialog open>
+    <Dialog isOpen>
       Default Dialog
     </Dialog>
   );

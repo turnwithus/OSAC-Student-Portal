@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -9,6 +9,9 @@ export const Dialog = (props) => {
     variant,
     className,
     children,
+    closeBtnText,
+    id,
+    isOpen,
     triggerText,
     ...rest
   } = props;
@@ -19,12 +22,22 @@ export const Dialog = (props) => {
     { [`${className}`]: className }
   );
 
+  const [dialogOpen, setDialogOpen] = useState(props.isOpen);
+
+  const openDialog = () => {
+    setDialogOpen(true);
+  }
+
+  const closeDialog = () => {
+    setDialogOpen(false);
+  }
+
   return (
     <>
-      <Button>{triggerText}</Button>
-      <dialog className={classes} {...rest}>
+      <Button onClick={openDialog}>{triggerText}</Button>
+      <dialog className={classes} {...rest} open={dialogOpen}>
         {children}
-        <Button variant="close"><span className="sr-only">close</span></Button>
+        <Button variant="close" onClick={closeDialog}><span className="sr-only">{closeBtnText}</span></Button>
       </dialog>
     </>
   );
@@ -33,6 +46,9 @@ export const Dialog = (props) => {
 Dialog.defaultProps = {
   variant: 'default',
   triggerText: 'Open dialog',
+  closeBtnText: 'Close',
+  id: 'dialog676',
+  isOpen: null,
 };
 
 Dialog.propTypes = {
@@ -40,4 +56,6 @@ Dialog.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   triggerText: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  isOpen: PropTypes.bool,
+  id: PropTypes.string,
 };

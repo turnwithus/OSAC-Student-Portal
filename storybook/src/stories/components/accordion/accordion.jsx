@@ -23,10 +23,9 @@ export const Accordion = (props) => {
   );
 
   const [accordionOpen, setAccordionOpen] = useState(props.isOpen);
-
+  
   // elements in a closed accordion must not be able to be tabbed to for ADA concerns. 
   // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
-  
   const adaToggle = () => {
     const allChildren = Array.from(
       document.querySelectorAll('.accordion__content .link,.accordion__content .input,.accordion__content .button,.accordion__content .label,.accordion__content .select')
