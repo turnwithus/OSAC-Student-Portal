@@ -16,6 +16,9 @@
 - https://en.bem.info/methodology/quick-start/
 - By using a functional and consistent naming convention for our elements, we increase the efficiency of development, and also reduce the effort/cost to maintain code long-term. 
 
+# SCSS
+- https://sass-lang.com/
+
 ## Best Practices
 - Always, check to see if a component or block exists before creating something new
 - It is better to adapt an existing element via `variant` (e.g: `marquee--really-big`) than it is to create a new element (e.g. `marquee-really-big`). This keeps the markup and CSS performant as well as smaller in size.
@@ -29,7 +32,7 @@
 - `npx storybook@latest upgrade` this will upgrade version of Storybook. You may get prompted during this process to allow it to perform a "migration". If so, this is not needed or recommended as this solution was initiated using Storybook 7 to begin with.
 
 # Creating a new element
-1. stop Storybook, if it's running, by `ctrl/cmd + C`
+1. stop Storybook, if it's running, by `ctrl/cmd + c`
 2. `npm run new`
 3. select your element type (based on BEM/Atomic Design) and name it
 4. `npm run storybook`
