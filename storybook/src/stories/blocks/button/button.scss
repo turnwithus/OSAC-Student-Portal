@@ -90,4 +90,34 @@
     background-color: $colorBlack;
     color: $colorWhite;
   }
+
+  &--close {
+    background-color: transparent;
+    border-radius: 0;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 2rem;
+
+    &::before,
+    &::after {
+      background-color: $colorBlack;
+      content: '';
+      display: block;
+      height: 2px;
+      left: calc(.5rem - 1px);
+      position: absolute;
+      transform-origin: center center;
+      width: 1rem;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
 }

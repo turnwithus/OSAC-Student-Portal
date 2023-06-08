@@ -64,3 +64,9 @@ export const Plain = () => {
     <Button variant="plain">Change email address</Button>
   );
 };
+
+export const Close = () => {
+  return  (
+    <Button variant="close"><span className="sr-only">Close this dialog</span></Button>
+  );
+};
