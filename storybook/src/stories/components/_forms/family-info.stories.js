@@ -8,7 +8,7 @@ import { Select } from '../../blocks/select/select';
 import { ProgressBar } from '../progress-bar/progress-bar';
 
 export default {
-  title: 'Forms/Family Info',
+  title: 'Example Forms/Family Info',
 };
 
 export const FamilyInfo = () => {

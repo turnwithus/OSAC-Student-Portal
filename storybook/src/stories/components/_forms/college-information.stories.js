@@ -9,7 +9,7 @@ import { Select } from '../../blocks/select/select';
 import { SubForm } from '../../components/sub-form/sub-form';
 
 export default {
-  title: 'Forms/College Information',
+  title: 'Example Forms/College Information',
 };
 
 export const CollegeInformation = () => {

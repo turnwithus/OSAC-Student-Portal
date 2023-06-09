@@ -10,7 +10,7 @@ import { ProgressBar } from '../progress-bar/progress-bar';
 import { Select } from '../../blocks/select/select';
 
 export default {
-  title: 'Forms/Personal Info',
+  title: 'Example Forms/Personal Info',
 };
 
 export const PersonalInfo = () => {

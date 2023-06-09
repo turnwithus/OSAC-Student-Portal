@@ -6,7 +6,7 @@ import { BasicInfo } from '../components/_forms/basic-info.stories';
 import { PersonalInfo } from '../components/_forms/personal-info.stories';
 
 export default {
-  title: 'Pages/Prompting Updates',
+  title: 'Example Pages/Prompting Updates',
   parameters: {
     layout: 'fullscreen',
   },

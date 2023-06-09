@@ -6,7 +6,7 @@ import { InputRadio } from '../../blocks/input-radio/input-radio';
 import { ProgressBar } from '../progress-bar/progress-bar';
 
 export default {
-  title: 'Forms/Work Status',
+  title: 'Example Forms/Work Status',
 };
 
 export const WorkStatus = () => {

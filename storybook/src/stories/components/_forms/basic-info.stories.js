@@ -6,7 +6,7 @@ import { Input } from '../../blocks/input/input';
 import { ProgressBar } from '../progress-bar/progress-bar';
 
 export default {
-  title: 'Forms/Basic Info',
+  title: 'Example Forms/Basic Info',
 };
 
 export const BasicInfo = () => {

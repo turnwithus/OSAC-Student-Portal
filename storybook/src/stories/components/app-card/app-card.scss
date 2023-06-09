@@ -1,0 +1,67 @@
+.app-card {
+  border: 1px solid $colorGray-1;
+  border-radius: .25rem;
+  margin-bottom: $spacing;
+  padding: $spacing;
+
+  &__layout {
+    display: grid;
+    gap: $spacing;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include mq-md {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__info {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+
+    @include mq-md {
+      grid-column: 1/span 9;
+    }
+
+    strong {
+      display: block;
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+    }
+
+    em {
+      display: block;
+      font-style: normal;
+      font-size: 1rem;
+      margin-right: 2ch;
+
+      @include mq-md {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__alert {
+    align-items: center;
+    display: flex;
+    color: $colorRed;
+    padding-top: $spacing;
+
+    .image {
+      margin-right: 1ch;
+    }
+  }
+
+  &__cta {
+    align-items: center;
+    display: flex;
+
+    @include mq-md {
+      grid-column: 10/span 3;
+      justify-content: end;
+    }
+
+    .button {
+      margin-top: 0;
+    }
+  }
+}

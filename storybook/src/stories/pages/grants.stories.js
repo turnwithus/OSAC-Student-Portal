@@ -5,7 +5,7 @@ import { Card } from '../components/card/card';
 import { Marquee } from '../components/marquee/marquee';
 
 export default {
-  title: 'Pages/Grants',
+  title: 'Example Pages/Grants',
   parameters: {
     layout: 'fullscreen',
   },

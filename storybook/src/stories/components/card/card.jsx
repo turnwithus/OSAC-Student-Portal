@@ -99,12 +99,11 @@ export const Card = (props) => {
 
 Card.defaultProps = {
   title: 'Betty Campbell & Jeannette Crawley',
-  tooltipText: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
   status: 'eligible',
 };
 
 Card.propTypes = {
-  variant: PropTypes.oneOf(['default']),
+  variant: PropTypes.oneOf(['default', 'application']),
   status: PropTypes.oneOf(['eligible', 'ineligible', 'inprogress', 'awarded', 'renewable', 'submitted']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),

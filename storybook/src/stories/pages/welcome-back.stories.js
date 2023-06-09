@@ -2,7 +2,7 @@ import { Pageshell } from '../layouts/pageshell/pageshell';
 import { Marquee } from '../components/marquee/marquee';
 
 export default {
-  title: 'Pages/Welcome Back',
+  title: 'Example Pages/Welcome Back',
   parameters: {
     layout: 'fullscreen',
   },

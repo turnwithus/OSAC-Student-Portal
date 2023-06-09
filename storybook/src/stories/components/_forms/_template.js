@@ -4,7 +4,7 @@ import { Form } from '../form/form';
 import { Fieldset } from '../fieldset/fieldset';
 
 export default {
-  title: 'Forms/Basic Info',
+  title: 'Example Forms/Basic Info',
 };
 
 export const BasicInfo = () => {

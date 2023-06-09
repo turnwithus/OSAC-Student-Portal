@@ -8,7 +8,7 @@ import { PersonalInfo } from '../components/_forms/personal-info.stories';
 import { WorkStatus } from '../components/_forms/work-status.stories';
 
 export default {
-  title: 'Pages/Create Profile',
+  title: 'Example Pages/Create Profile',
   parameters: {
     layout: 'fullscreen',
   },

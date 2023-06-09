@@ -104,7 +104,7 @@ export const Tabs = (props) => {
 
 /* PROTYPE DEFINITIONS */
 Tabs.propTypes = {
-  variant: PropTypes.oneOf(['default', 'vertical', 'vert']),
+  variant: PropTypes.oneOf(['default', 'pagination']),
   className: PropTypes.string,
   children: PropTypes.node
 };

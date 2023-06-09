@@ -3,6 +3,7 @@ import { Alert } from './alert';
 export default {
   title: 'Components/Alert',
   component: Alert,
+  tags: ['autodocs'],
 };
 
 export const Default = () => {

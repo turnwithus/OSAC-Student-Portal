@@ -5,7 +5,7 @@ import { Fieldset } from '../fieldset/fieldset';
 import { Textarea } from '../../blocks/textarea/textarea';
 
 export default {
-  title: 'Forms/Personal Statements',
+  title: 'Example Forms/Personal Statements',
 };
 
 export const PersonalStatements = () => {
